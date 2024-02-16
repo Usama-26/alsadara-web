@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navbar {
+    position: relative;
+    display: inline-block;
+  }
+
+  .selector {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Adjust this according to your design */
+    outline: 1px solid #aaa;
+    outline-offset: 4px;
+    border-radius: 4rem; /* Adjust the radius as needed */
+    transition: all 0.3s ease; /* Smooth transition for width changes */
+    z-index: -10;
+  }
+
+  .menu {
+    list-style-type: none;
+    padding: 0 0.5rem;
+    margin: 0;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+  }
+
+  .menu li a {
+    @apply text-sm text-gray-200 uppercase rounded-full py-1 px-2 inline-block;
+  }
+
+  .menu li {
+    @apply inline-block;
+  }
+  .menu li:hover .selector {
+    @apply w-full;
+  }
+  .menu li:hover a {
+    @apply text-white;
+  }
+
+  .constrained-padded {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .stats-bg {
+    background: url("/images/home/stats/background.jpg");
+    @apply bg-no-repeat bg-cover;
+  }
+
+  .services-bg {
+    background: url("/images/home/services/services-bg.png");
+    @apply bg-no-repeat bg-cover;
+  }
+
+  ul.slick-dots li.slick-active span.active-dot {
+    @apply bg-primary w-6 border-transparent;
+  }
+}
