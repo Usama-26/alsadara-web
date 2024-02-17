@@ -12,7 +12,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className=" pt-40 bg-primary-dark text-white">
+    <footer className=" lg:pt-40 pt-20 bg-primary-dark text-white">
       <div className="py-10 container mx-auto text-sm px-6 lg:px-8">
         <div className="flex md:flex-row flex-col gap-6">
           <div className="basis-1/5 pr-4">
@@ -179,7 +179,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="constrained-padded border-t py-4 text-center">
+      <div className="constrained-padded border-t py-4 text-center text-sm">
         <h6>Copyright © 2024 alsadara. All right reserved.</h6>
       </div>
     </footer>

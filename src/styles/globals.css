@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  body {
+    overflow-x: hidden;
+  }
   .navbar {
     position: relative;
     display: inline-block;
@@ -16,7 +19,6 @@
     outline-offset: 4px;
     border-radius: 4rem; /* Adjust the radius as needed */
     transition: all 0.3s ease; /* Smooth transition for width changes */
-    z-index: -10;
   }
 
   .menu {
@@ -26,6 +28,7 @@
     display: flex;
     gap: 0.5rem;
     z-index: 10;
+    position: relative;
   }
 
   .menu li a {
@@ -49,6 +52,10 @@
   .stats-bg {
     background: url("/images/home/stats/background.jpg");
     @apply bg-no-repeat bg-cover;
+  }
+  .hero-bg {
+    /* background: url("/images/home/carousel/hero-1.jpg"); */
+    @apply bg-no-repeat bg-cover bg-fixed;
   }
 
   .services-bg {

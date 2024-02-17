@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function useIntersection(sectionId = null) {
+export default function useIntersection(sectionId = null, threshold = 0.1) {
   const [isSectionVisible, setIsSectionVisible] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function useIntersection(sectionId = null) {
           }
         });
       },
-      { threshold: 0.1, root: null }
+      { threshold: threshold, root: null }
     );
 
     observer.observe(section);

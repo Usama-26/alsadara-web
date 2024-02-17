@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <nav className="navbar" onMouseLeave={handleMouseLeave}>
       <div ref={selectorRef} className="selector"></div>
-      <ul className="menu ">
+      <ul className="menu">
         {navItems.map((item, index) => (
           <li key={index} ref={(el) => (menuItemRefs[index] = el)}>
             <a

@@ -28,7 +28,7 @@ export default function FileDropzone({}) {
   return (
     <Dropzone accept={"image/*"} onDrop={handleOnDrop}>
       {({ getRootProps, getInputProps }) => (
-        <>
+        <div>
           <div
             {...getRootProps()}
             className="border border-gray-400 group border-dashed rounded-md cursor-pointer py-5 hover:bg-primary-50 text-sm text-center"
@@ -46,7 +46,7 @@ export default function FileDropzone({}) {
               Supported Files <b>jpeg, PNG</b>
             </p>
           </div>
-        </>
+        </div>
       )}
     </Dropzone>
   );
