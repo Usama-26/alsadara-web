@@ -1,15 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Services({}) {
   return (
     <section className="py-20">
       <div className="constrained-padded">
-        <div className="services-bg">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ amount: 0.3, margin: "50px" }}
+          className="services-bg"
+        >
           <div className="bg-primary/90 py-10 px-4 text-white">
             <div className="grid lg:grid-cols-3 grid-cols-1 text-sm">
-              <div className="lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400">
+              <motion.div className="lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400">
                 <div className="space-y-4">
                   <h1 className="font-display font-bold text-2xl uppercase tracking-wider">
                     Services
@@ -32,7 +40,7 @@ export default function Services({}) {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
               <div className="lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400">
                 <div className="space-y-4">
                   <div className="flex justify-between">
@@ -199,7 +207,7 @@ export default function Services({}) {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -7,10 +7,10 @@ import OurProjects from "@/components/Home/Projects";
 import Services from "@/components/Home/Services";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import Stats from "@/components/Stats";
-
+import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <>
+    <motion.section animate={{ opacity: [0, 1], transition: { duration: 2 } }}>
       <Hero />
       <AboutUs />
       <Stats />
@@ -20,6 +20,6 @@ export default function Home() {
       <OurPartners />
       <CTA />
       <Footer />
-    </>
+    </motion.section>
   );
 }

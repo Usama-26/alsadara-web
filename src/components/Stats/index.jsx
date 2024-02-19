@@ -1,42 +1,86 @@
+import { useAnimate } from "framer-motion";
+import { useInView } from "framer-motion";
+import { motion, useTransform, useMotionValue } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+const stats = [
+  {
+    title: "Projects Completed",
+    number: 176,
+  },
+  {
+    title: "Happy Clients",
+    number: 1750,
+  },
+  {
+    title: "Qualified Staff",
+    number: 230,
+  },
+  {
+    title: "Man Save Hours",
+    number: 30,
+  },
+  {
+    title: "Countries",
+    number: 6,
+  },
+];
 export default function Stats() {
   return (
-    <div class="lg:pt-0 stats-bg">
+    <motion.div className="lg:pt-0 stats-bg">
       <div className="bg-gray-900/70">
-        <div class="constrained-padded">
+        <div className="constrained-padded">
           <div className="py-8 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 lg:gap-0 gap-8 text-white text-center">
-            <div className=" flex items-center justify-center gap-4 ">
-              <div>
-                <h1 className="font-display text-4xl">176+</h1>
-                <h6 className=" text-sm">Projects Completed</h6>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-4">
-              <div>
-                <h1 className="font-display text-4xl">1750+</h1>
-                <h6 className=" text-sm">Happy Clients</h6>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-4">
-              <div>
-                <h1 className="font-display text-4xl">230+</h1>
-                <h6 className=" text-sm">Qualified Staff</h6>
-              </div>
-            </div>
-            <div className="flex items-center justify-center gap-4">
-              <div>
-                <h1 className="font-display text-4xl">30k+</h1>
-                <h6 className=" text-sm">Total Man Save Hours</h6>
-              </div>
-            </div>
-            <div className="lg:col-span-1 col-span-2 flex items-center justify-center gap-4">
-              <div>
-                <h1 className="font-display text-4xl">6</h1>
-                <h6 className=" text-sm">Countries</h6>
-              </div>
-            </div>
+            {stats.map((stat, index) => (
+              <AnimatedStat key={index} stat={stat} index={index} />
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
+  );
+}
+
+function AnimatedStat({ stat, index }) {
+  const count = useMotionValue(0);
+  const [scope, animate] = useAnimate();
+  const rounded = useTransform(count, Math.round);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const variants = {
+    visible: (i) => ({
+      y: 0,
+      opacity: 1,
+      transition: { type: "spring", duration: 1, delay: i * 0.1 },
+    }),
+    hidden: { y: 20, opacity: 0 },
+  };
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, stat.number, { duration: 2 });
+
+      return controls.stop;
+    }
+  }, [isInView, count, stat.number, animate]);
+
+  return (
+    <motion.div
+      initial={"hidden"}
+      variants={variants}
+      custom={index}
+      viewport={{
+        once: true,
+      }}
+      ref={ref}
+      whileInView={"visible"}
+      className="flex items-center justify-center gap-4"
+    >
+      <div>
+        <motion.h1 className="font-display text-4xl">{rounded}</motion.h1>
+        <h6 className=" text-sm">{stat.title}</h6>
+      </div>
+    </motion.div>
   );
 }
