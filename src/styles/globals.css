@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,7 @@
 @layer components {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     overflow-x: hidden;

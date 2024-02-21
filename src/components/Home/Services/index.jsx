@@ -2,7 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { useState } from "react";
+
+const itemVariants = {
+  visible: (i) => ({
+    y: 0,
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1, delay: i * 0.1 },
+  }),
+  hidden: { y: 20, x: 20, opacity: 0 },
+};
 
 export default function Services({}) {
   return (
@@ -17,8 +26,15 @@ export default function Services({}) {
         >
           <div className="bg-primary/90 py-10 px-4 text-white">
             <div className="grid lg:grid-cols-3 grid-cols-1 text-sm">
-              <motion.div className="lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400">
-                <div className="space-y-4">
+              <motion.div
+                initial={"hidden"}
+                custom={0}
+                whileInView={"visible"}
+                variants={itemVariants}
+                className="relative group lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
                   <h1 className="font-display font-bold text-2xl uppercase tracking-wider">
                     Services
                   </h1>
@@ -41,8 +57,15 @@ export default function Services({}) {
                   </div>
                 </div>
               </motion.div>
-              <div className="lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400">
-                <div className="space-y-4">
+              <motion.div
+                initial={"hidden"}
+                custom={1}
+                whileInView={"visible"}
+                variants={itemVariants}
+                className="relative group lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
                   <div className="flex justify-between">
                     <Image
                       src={"/icons/services/bolt.svg"}
@@ -51,7 +74,9 @@ export default function Services({}) {
                       alt="Power System Studies Logo"
                       className="w-10 h-10"
                     />
-                    <h1 className="text-2xl font-bold text-gray-600">01</h1>
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      01
+                    </h1>
                   </div>
                   <h2 className="font-display font-bold text-lg ">
                     Power System Studies
@@ -72,9 +97,16 @@ export default function Services({}) {
                     </Link>
                   </div>
                 </div>
-              </div>
-              <div className="lg:px-12 px-4 py-4 border-b border-gray-400">
-                <div className="space-y-4">
+              </motion.div>
+              <motion.div
+                initial={"hidden"}
+                custom={2}
+                whileInView={"visible"}
+                variants={itemVariants}
+                className="relative group lg:px-12 px-4 py-4 border-b border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
                   <div className="flex justify-between">
                     <Image
                       src={"/icons/services/config.svg"}
@@ -84,7 +116,9 @@ export default function Services({}) {
                         Management Logo"
                       className="w-10 h-10"
                     />
-                    <h1 className="text-2xl font-bold text-gray-600">02</h1>
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      02
+                    </h1>
                   </div>
                   <h2 className="font-display font-bold text-lg ">
                     Facility Management
@@ -105,9 +139,16 @@ export default function Services({}) {
                     </Link>
                   </div>
                 </div>
-              </div>
-              <div className="lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400">
-                <div className="space-y-4">
+              </motion.div>
+              <motion.div
+                initial={"hidden"}
+                custom={3}
+                whileInView={"visible"}
+                variants={itemVariants}
+                className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
                   <div className="flex justify-between">
                     <Image
                       src={"/icons/services/capacitor.svg"}
@@ -117,7 +158,9 @@ export default function Services({}) {
                         Management Logo"
                       className="w-10 h-10"
                     />
-                    <h1 className="text-2xl font-bold text-gray-600">03</h1>
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      03
+                    </h1>
                   </div>
                   <h2 className="font-display font-bold text-lg ">
                     Operation & Maintenance Solution
@@ -138,9 +181,16 @@ export default function Services({}) {
                     </Link>
                   </div>
                 </div>
-              </div>
-              <div className="lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400">
-                <div className="space-y-4">
+              </motion.div>
+              <motion.div
+                initial={"hidden"}
+                custom={4}
+                whileInView={"visible"}
+                variants={itemVariants}
+                className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
                   <div className="flex justify-between">
                     <Image
                       src={"/icons/services/cog.svg"}
@@ -150,7 +200,9 @@ export default function Services({}) {
                         Management Logo"
                       className="w-10 h-10"
                     />
-                    <h1 className="text-2xl font-bold text-gray-600">04</h1>
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      04
+                    </h1>
                   </div>
                   <h2 className="font-display font-bold text-lg ">
                     MEP Solution
@@ -171,9 +223,16 @@ export default function Services({}) {
                     </Link>
                   </div>
                 </div>
-              </div>
-              <div className="lg:px-12 px-4 py-4 border-gray-400">
-                <div className="space-y-4">
+              </motion.div>
+              <motion.div
+                initial={"hidden"}
+                custom={5}
+                whileInView={"visible"}
+                variants={itemVariants}
+                className="relative group lg:px-12 px-4 py-4 border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
                   <div className="flex justify-between">
                     <Image
                       src={"/icons/services/electric-points.svg"}
@@ -183,7 +242,9 @@ export default function Services({}) {
                         Management Logo"
                       className="w-10 h-10"
                     />
-                    <h1 className="text-2xl font-bold text-gray-600">05</h1>
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      05
+                    </h1>
                   </div>
                   <h2 className="font-display font-bold text-lg ">
                     Electrical Installation
@@ -204,7 +265,7 @@ export default function Services({}) {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </motion.div>

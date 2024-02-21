@@ -6,12 +6,12 @@ import { useScroll } from "framer-motion";
 export default function AboutUs({}) {
   const { scrollYProgress } = useScroll();
   const textVariants = {
-    hidden: { opacity: 0, lineHeight: "200%" },
+    hidden: { opacity: 0, y: 10 },
     visible: {
       opacity: 1,
-      lineHeight: "150%",
+      y: 0,
       transition: {
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
@@ -25,12 +25,12 @@ export default function AboutUs({}) {
         }}
         initial={"hidden"}
         animate={{
-          y: [0, -150],
+          y: [0, -50],
           opacity: 1,
-          transition: { duration: 1, delay: 1 },
+          transition: { duration: 1, delay: 0.5 },
         }}
-        viewport={{ once: true }}
-        className="bg-gray-100 constrained-padded w-full rounded-3xl shadow-lg px-8 py-20 -translate-y-24"
+        // viewport={{ once: true }}
+        className="bg-gray-100 constrained-padded w-full rounded-3xl shadow-lg px-8 py-10 "
       >
         <div className="py-4 flex lg:flex-row flex-col gap-6">
           <div className="basis-3/5">
@@ -46,13 +46,13 @@ export default function AboutUs({}) {
                         opacity: 1,
                         y: 0,
                         transition: {
-                          duration: 0.5,
-                          delay: i * 0.1,
+                          duration: 1,
+                          delay: i * 0.2,
                         },
                       },
                     }}
                     whileInView={"visible"}
-                    viewport={{ once: true }}
+                    // viewport={{ once: true }}
                     key={i}
                     className="inline-block"
                   >
@@ -69,11 +69,11 @@ export default function AboutUs({}) {
                     opacity: 1,
                     x: 0,
                     transition: {
-                      duration: 0.5,
+                      duration: 1,
                     },
                   },
                 }}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 whileInView={"visible"}
                 className="font-display lg:text-lg"
               >
@@ -85,7 +85,7 @@ export default function AboutUs({}) {
               <motion.p
                 initial={"hidden"}
                 whileInView={"visible"}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 variants={textVariants}
               >
                 alsadara is a premier provider of Energy & Facilities Management
@@ -96,7 +96,7 @@ export default function AboutUs({}) {
               <motion.p
                 initial={"hidden"}
                 whileInView={"visible"}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 variants={textVariants}
               >
                 The firm, established in 2013 by a team of experienced
@@ -106,7 +106,7 @@ export default function AboutUs({}) {
               <motion.p
                 initial={"hidden"}
                 whileInView={"visible"}
-                viewport={{ once: true }}
+                // viewport={{ once: true }}
                 variants={textVariants}
               >
                 In 2018, we extended our services to Saudi Arabia, India
@@ -123,23 +123,17 @@ export default function AboutUs({}) {
           </div>
           <div className="basis-2/5 relative">
             <Image
-              src={"/images/home/aboutus/image-1.jpg"}
-              width={498}
-              height={327}
+              src={"/images/home/aboutus/image-3.jpg"}
+              width={1200}
+              height={1119}
               alt="About us Image 1"
               className="ml-auto relative rounded-xl"
             />
-            <Image
-              src={"/images/home/aboutus/image-2.jpg"}
-              width={362}
-              height={238}
-              alt="About us Image 2"
-              className=" rounded-xl relative bottom-0"
-            />
-            <div className="rounded-xl py-2 px-2 w-1/4 block ml-auto relative text-center text-white bg-primary">
+
+            {/* <div className="rounded-xl py-2 px-2 w-1/4 block ml-auto relative text-center text-white bg-primary">
               <span className="font-bold lg:text-2xl font-display">11+</span>
               <p className="lg:text-base text-sm">Years of experience</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </motion.div>

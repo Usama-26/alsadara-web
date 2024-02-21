@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 export function ProjectCard({ project }) {
   return (
-    <div className=" relative border rounded-xl hover:shadow-xl transition-shadow duration-150 shadow-gray-700">
+    <motion.div className="relative border rounded-xl hover:shadow-xl transition-shadow duration-150 shadow-gray-700">
       <div className="relative">
         <Image
           width="386"
@@ -29,6 +30,6 @@ export function ProjectCard({ project }) {
           </span>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

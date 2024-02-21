@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function Navbar() {
@@ -5,7 +6,7 @@ export default function Navbar() {
   const menuItemRefs = [];
 
   const navItems = [
-    { label: "About Us", link: "#" },
+    { label: "About Us", link: "aboutus" },
     { label: "Services", link: "#" },
     { label: "Projects", link: "#" },
     { label: "Partners", link: "#" },
@@ -30,13 +31,13 @@ export default function Navbar() {
       <ul className="menu">
         {navItems.map((item, index) => (
           <li key={index} ref={(el) => (menuItemRefs[index] = el)}>
-            <a
+            <Link
               href={item.link}
               onMouseEnter={() => handleMouseEnter(menuItemRefs[index])}
               className=""
             >
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

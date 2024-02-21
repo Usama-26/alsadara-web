@@ -1,15 +1,50 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function WhyChooseUs({}) {
+  const leftVariants = {
+    hidden: { x: -100, scale: 0.9, opacity: 0 },
+    visible: {
+      x: 0,
+
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 },
+    },
+  };
+  const rightVariants = {
+    hidden: { x: 100, scale: 0.9, opacity: 0 },
+    visible: {
+      x: 0,
+
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 },
+    },
+  };
+  const containerVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
   return (
     <section>
-      <div className="constrained-padded my-20">
+      <motion.div
+        initial={"hidden"}
+        variants={containerVariants}
+        whileInView={"visible"}
+        className="constrained-padded my-20"
+      >
         <h1 className="font-display text-3xl text-center">
           Why Choose Alsadara
         </h1>
         <div className="my-10">
           <div className="flex">
-            <div className="lg:block hidden basis-1/2">
+            <motion.div
+              initial={"hidden"}
+              variants={leftVariants}
+              whileInView={"visible"}
+              className="lg:block hidden basis-1/2"
+            >
               <div className="">
                 <Image
                   src={"/images/whychooseus/engineer.png"}
@@ -19,8 +54,13 @@ export default function WhyChooseUs({}) {
                   className="w-96 mx-auto rounded-[2rem]"
                 />
               </div>
-            </div>
-            <div className="lg:basis-1/2 lg:space-y-0 space-y-8">
+            </motion.div>
+            <motion.div
+              initial={"hidden"}
+              variants={rightVariants}
+              whileInView={"visible"}
+              className="lg:basis-1/2 lg:space-y-0 space-y-8"
+            >
               <div className="flex lg:flex-row flex-col lg:text-left text-center">
                 <div className="basis-1/6 lg:mr-4 flex-shrink-0">
                   <Image
@@ -110,10 +150,10 @@ export default function WhyChooseUs({}) {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

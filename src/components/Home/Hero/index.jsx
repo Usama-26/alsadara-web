@@ -123,8 +123,11 @@ export default function Hero({}) {
         ref={(slider) => {
           sliderRef = slider;
         }}
-        speed={1000}
+        speed={3000}
         arrows={false}
+        fade
+        autoplaySpeed={5000}
+        autoplay
         cssEase="cubic-bezier(.44,.71,.48,.89)"
       >
         {images.map((image, index) => (

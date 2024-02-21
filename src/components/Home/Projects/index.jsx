@@ -1,5 +1,5 @@
 import { ProjectCard } from "@/components/Card";
-
+import { motion } from "framer-motion";
 const projects = [
   {
     name: "Jubail 2020",
@@ -16,8 +16,26 @@ const projects = [
 ];
 
 export default function OurProjects() {
+  const containerVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: (i) => ({
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5, delay: i * 0.2 },
+    }),
+  };
   return (
-    <section className="my-20">
+    <motion.section
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+      viewport={{ margin: "50px" }}
+      className="my-20"
+    >
       <div className="constrained-padded">
         <div className="space-y-2">
           <h6 className="text-center text-primary-light font-display">
@@ -33,13 +51,26 @@ export default function OurProjects() {
           </p>
         </div>
         <div className="my-10">
-          <div className="grid lg:grid-cols-3 grid-cols-1 gap-8">
+          <motion.div
+            initial={"hidden"}
+            variants={containerVariants}
+            whileInView={"visible"}
+            className="grid lg:grid-cols-3 grid-cols-1 gap-8"
+          >
             {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
+              <motion.div
+                custom={index}
+                initial={"hidden"}
+                whileInView={"visible"}
+                variants={itemVariants}
+                key={index}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -7,19 +7,27 @@ import OurProjects from "@/components/Home/Projects";
 import Services from "@/components/Home/Services";
 import WhyChooseUs from "@/components/Home/WhyChooseUs";
 import Stats from "@/components/Stats";
+import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 export default function Home() {
   return (
-    <motion.section animate={{ opacity: [0, 1], transition: { duration: 2 } }}>
-      <Hero />
-      <AboutUs />
-      <Stats />
-      <Services />
-      <WhyChooseUs />
-      <OurProjects />
-      <OurPartners />
-      <CTA />
-      <Footer />
-    </motion.section>
+    <AnimatePresence>
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        exit={{ opacity: 0 }}
+      >
+        <Hero />
+        <AboutUs />
+        <Stats />
+        <Services />
+        <WhyChooseUs />
+        <OurProjects />
+        <OurPartners />
+        <CTA />
+        <Footer />
+      </motion.section>
+    </AnimatePresence>
   );
 }

@@ -9,9 +9,20 @@ const images = [
   "/images/partners/partner-5.png",
 ];
 
+import { motion } from "framer-motion";
+
 export default function OurPartners() {
+  const containerVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+  };
   return (
-    <section className="my-20">
+    <motion.section
+      initial={"hidden"}
+      variants={containerVariants}
+      whileInView={"visible"}
+      className="my-20"
+    >
       <div className="constrained-padded overflow-x-hidden">
         <h1 className="font-display lg:text-3xl text-2xl text-center capitalize">
           Our Trusted Partners
@@ -37,6 +48,6 @@ export default function OurPartners() {
           </SlickSlider>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

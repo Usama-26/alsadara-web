@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: "Tahoma, system-ui, sans-serif",
+      sans: "Quicksand , sans-serif",
       display: "Gotham Rounded, Arial, sans-serif",
     },
 

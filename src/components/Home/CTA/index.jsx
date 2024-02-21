@@ -1,10 +1,36 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function CTA({}) {
+  const leftVariants = {
+    hidden: { x: -100, y: 100, scale: 0.9, opacity: 0 },
+    visible: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 },
+    },
+  };
+  const rightVariants = {
+    hidden: { x: 100, y: 100, scale: 0.9, opacity: 0 },
+    visible: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 },
+    },
+  };
   return (
     <section className="my-10 lg:translate-y-40 translate-y-20">
       <div className="constrained-padded flex ">
-        <div className="lg:block hidden lg:basis-1/2 shadow-lg rounded-l-3xl">
+        <motion.div
+          initial={"hidden"}
+          variants={leftVariants}
+          whileInView={"visible"}
+          className="lg:block hidden lg:basis-1/2 shadow-lg rounded-l-3xl"
+        >
           <Image
             src={"/images/contactus/contactus.jpg"}
             width={650}
@@ -12,8 +38,13 @@ export default function CTA({}) {
             alt="Contact Us"
             className=" rounded-l-3xl"
           />
-        </div>
-        <div className="lg:basis-1/2 bg-gray-100 lg:rounded-r-3xl lg:rounded-none rounded-3xl shadow-lg">
+        </motion.div>
+        <motion.div
+          initial={"hidden"}
+          variants={rightVariants}
+          whileInView={"visible"}
+          className="lg:basis-1/2 bg-gray-100 lg:rounded-r-3xl lg:rounded-none rounded-3xl shadow-lg"
+        >
           <div className="py-6">
             <h1 className="font-display text-3xl text-center capitalize">
               Get in Touch
@@ -65,7 +96,7 @@ export default function CTA({}) {
               </div>
             </form>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
