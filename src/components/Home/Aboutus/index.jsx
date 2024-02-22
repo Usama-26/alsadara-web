@@ -32,10 +32,10 @@ export default function AboutUs({}) {
         // viewport={{ once: true }}
         className="bg-gray-100 constrained-padded w-full rounded-3xl shadow-lg px-8 py-10 "
       >
-        <div className="py-4 flex lg:flex-row flex-col gap-6">
+        <div className="py-4 flex lg:flex-row flex-col gap-x-10 gap-y-16">
           <div className="basis-3/5">
             <div className="text-primary space-y-2">
-              <h6 className="text-primary">About us</h6>
+              <h6 className="text-primary font-medium">About us</h6>
               <h1 className="text-primary font-display lg:text-3xl text-2xl">
                 {"Welcome to alsadara".split(" ").map((word, i) => (
                   <motion.span
@@ -77,11 +77,11 @@ export default function AboutUs({}) {
                 whileInView={"visible"}
                 className="font-display lg:text-lg"
               >
-                Providing best industrial solution for our customers <br />{" "}
-                business growing in last 11+ years.
+                Providing best industrial solution for our customers business{" "}
+                <br className="hidden lg:block" /> growing in last 11+ years.
               </motion.p>
             </div>
-            <div className="space-y-2 my-4 text-sm">
+            <div className="space-y-2 my-4 mb-6 text-sm">
               <motion.p
                 initial={"hidden"}
                 whileInView={"visible"}
@@ -115,25 +115,20 @@ export default function AboutUs({}) {
               </motion.p>
             </div>
             <Link
-              href={"#"}
-              className="rounded-full px-6 py-2 text-white bg-primary-light font-display"
+              href={"aboutus"}
+              className="rounded-full px-6 py-2 text-white bg-primary-light lg:text-base text-sm font-medium"
             >
               Read More
             </Link>
           </div>
           <div className="basis-2/5 relative">
             <Image
-              src={"/images/home/aboutus/image-3.jpg"}
+              src={"/images/home/aboutus/image-3.png"}
               width={1200}
               height={1119}
               alt="About us Image 1"
               className="ml-auto relative rounded-xl"
             />
-
-            {/* <div className="rounded-xl py-2 px-2 w-1/4 block ml-auto relative text-center text-white bg-primary">
-              <span className="font-bold lg:text-2xl font-display">11+</span>
-              <p className="lg:text-base text-sm">Years of experience</p>
-            </div> */}
           </div>
         </div>
       </motion.div>

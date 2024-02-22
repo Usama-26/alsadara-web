@@ -1,16 +1,19 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useRef } from "react";
 
 export default function Navbar() {
   const selectorRef = useRef(null);
+  const router = useRouter();
+  const pathname = router?.pathname;
   const menuItemRefs = [];
 
   const navItems = [
     { label: "About Us", link: "aboutus" },
-    { label: "Services", link: "#" },
-    { label: "Projects", link: "#" },
-    { label: "Partners", link: "#" },
-    { label: "Contact Us", link: "#" },
+    { label: "Services", link: "services" },
+    { label: "Projects", link: "projects" },
+    { label: "Partners", link: "partner" },
+    { label: "Contact Us", link: "contact" },
   ];
 
   const handleMouseEnter = (item) => {
@@ -34,7 +37,9 @@ export default function Navbar() {
             <Link
               href={item.link}
               onMouseEnter={() => handleMouseEnter(menuItemRefs[index])}
-              className=""
+              className={`${
+                pathname.includes(item.link) ? "bg-gray-200/20" : ""
+              }`}
             >
               {item.label}
             </Link>

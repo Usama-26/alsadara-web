@@ -61,7 +61,19 @@
   }
   .hero-bg {
     /* background: url("/images/home/carousel/hero-1.jpg"); */
+    @apply bg-no-repeat bg-top bg-cover bg-fixed;
+  }
+  .banner-bg {
+    background: url("/images/banner-bg.jpg");
     @apply bg-no-repeat bg-cover bg-fixed;
+  }
+  .about-hero-bg {
+    background: url("/images/aboutus/hero.jpg");
+    @apply bg-no-repeat bg-top bg-cover bg-fixed;
+  }
+  .partner-hero-bg {
+    background: url("/images/partners/hero.jpg");
+    @apply bg-no-repeat bg-bottom bg-cover bg-fixed;
   }
 
   .services-bg {

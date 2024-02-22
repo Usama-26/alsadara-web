@@ -49,13 +49,15 @@ export default function Hero({}) {
               whileInView={"visible"}
               className=""
             >
-              <Image
-                src={"/alsadarah-logo.png"}
-                width={426}
-                height={162}
-                alt="Alsadarah Logo"
-                className="w-32"
-              />
+              <Link href={"/"}>
+                <Image
+                  src={"/alsadarah-logo.png"}
+                  width={426}
+                  height={162}
+                  alt="Alsadarah Logo"
+                  className="w-32"
+                />
+              </Link>
             </motion.div>
             <motion.div
               initial={"hidden"}
@@ -76,7 +78,7 @@ export default function Hero({}) {
               <Navbar />
             </motion.div>
           </div>
-          <div className="flex gap-x-3 my-10">
+          <div className="flex gap-x-3 my-16">
             <button
               type="button"
               onClick={previous}
@@ -136,18 +138,18 @@ export default function Hero({}) {
               style={{
                 backgroundImage: `url(${image})`,
               }}
-              className="relative hero-bg"
+              className="relative  hero-bg"
             >
               <div className="relative constrained-padded">
                 <div className="flex justify-between py-48">
-                  <div className="text-white space-y-6">
+                  <div className="text-white space-y-6 mt-5">
                     <h1 className="font-display font-bold  lg:text-5xl text-3xl ">
                       <b className="text-primary">alsadara</b> power <br />
                       solutions
                     </h1>
-                    <p className="lg:text-base text-sm">
+                    <p className="pr-10">
                       We deliver top-notch expertise in every project, meeting
-                      minimum <br />
+                      minimum <br className="hidden lg:block" />
                       standards as fundamental client commitments.
                     </p>
                     <Link
