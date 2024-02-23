@@ -9,11 +9,12 @@ export default function Navbar() {
   const menuItemRefs = [];
 
   const navItems = [
-    { label: "About Us", link: "aboutus" },
-    { label: "Services", link: "services" },
-    { label: "Projects", link: "projects" },
-    { label: "Partners", link: "partner" },
-    { label: "Contact Us", link: "contact" },
+    { label: "Home", link: "/" },
+    { label: "About Us", link: "/aboutus" },
+    { label: "Services", link: "/services" },
+    { label: "Projects", link: "/projects" },
+    { label: "Partners", link: "/partner" },
+    { label: "Contact Us", link: "/contact" },
   ];
 
   const handleMouseEnter = (item) => {
@@ -38,7 +39,7 @@ export default function Navbar() {
               href={item.link}
               onMouseEnter={() => handleMouseEnter(menuItemRefs[index])}
               className={`${
-                pathname.includes(item.link) ? "bg-gray-200/20" : ""
+                pathname.startsWith(item.link) ? "bg-gray-200/20" : ""
               }`}
             >
               {item.label}

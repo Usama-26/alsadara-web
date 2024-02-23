@@ -62,7 +62,7 @@ export default function ServicesHero({}) {
             </motion.div>
           </div>
 
-          <div className="lg:mt-48 mt-20 text-end">
+          <div className="lg:mt-48 mt-10 text-end">
             <div className="inline-block">
               <div className="flex flex-col gap-y-3">
                 <button
@@ -90,16 +90,19 @@ export default function ServicesHero({}) {
       </div>
 
       <section>
-        <div className="h-screen relative partner-hero-bg">
+        <div className="h-screen relative services-hero-bg">
           <div className="relative constrained-padded">
             <div className="flex h-screen justify-center items-center">
               <div className="text-white space-y-6 text-center">
                 <h1 className="font-display font-bold lg:text-5xl text-3xl ">
-                  Partner
+                  Services
                 </h1>
                 <p className="lg:text-base text-sm">
-                  Elevate your path with alsadara power solutions, Partner{" "}
-                  <br /> with us for pioneering sustainable energy solutions.
+                  Experience a new standard of excellence in energy solutions{" "}
+                  <br className="hidden lg:block" />
+                  with alsadara power solutions, where innovation meets{" "}
+                  <br className="hidden lg:block" />
+                  sustainability for a truly bespoke service.
                 </p>
               </div>
             </div>

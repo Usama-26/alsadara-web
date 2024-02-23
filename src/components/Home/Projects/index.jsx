@@ -1,17 +1,23 @@
-import { ProjectCard } from "@/components/Card";
+import { ItemCard, ProjectCard } from "@/components/Card";
 import { motion } from "framer-motion";
 const projects = [
   {
     name: "Jubail 2020",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    img: "/images/projects/jubail.jpg",
+    href: "/",
   },
   {
     name: "Riyadh 2021",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    img: "/images/projects/mecca.jpg",
+    href: "/",
   },
   {
     name: "Makkah 2023",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    img: "/images/projects/riyadh.jpg",
+    href: "/",
   },
 ];
 
@@ -65,7 +71,7 @@ export default function OurProjects() {
                 variants={itemVariants}
                 key={index}
               >
-                <ProjectCard project={project} />
+                <ItemCard item={project} />
               </motion.div>
             ))}
           </motion.div>

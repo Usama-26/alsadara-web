@@ -5,6 +5,7 @@ import AboutHero from "@/components/Hero/AboutHero";
 import AboutUs from "@/components/Home/Aboutus";
 import Image from "next/image";
 import Link from "next/link";
+import PartnerCTA from "@/components/PartnerCTA";
 
 const values = [
   {
@@ -222,20 +223,7 @@ export default function Aboutus() {
             </motion.div>
           </div>
         </motion.div>
-        <div className="py-10 banner-bg">
-          <div className="constrained-padded">
-            <div className="flex lg:flex-row flex-col gap-4 justify-between font-display py-4 px-8">
-              <h1>
-                To become a partner of alsadara feel free to contact us today
-              </h1>
-              <div>
-                <Link href="partner" className="border-b border-gray-600">
-                  Become a partner
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <PartnerCTA />
         <CTA />
         <Footer />
       </motion.section>
