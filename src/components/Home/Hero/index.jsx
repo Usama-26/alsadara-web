@@ -10,7 +10,8 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
+
+import Header from "@/components/Header";
 
 const images = [
   "/images/home/carousel/hero-1.jpg",
@@ -32,52 +33,7 @@ export default function Hero({}) {
     <>
       <div className="relative constrained-padded">
         <div className="constrained-padded z-10 absolute w-full h-full py-10 left-0">
-          <div className="flex justify-between items-center ">
-            <motion.div
-              initial={"hidden"}
-              variants={{
-                hidden: { opacity: 0, x: -20 },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                  transition: {
-                    duration: 1,
-                  },
-                },
-              }}
-              viewport={{ once: true }}
-              whileInView={"visible"}
-              className=""
-            >
-              <Link href={"/"}>
-                <Image
-                  src={"/alsadarah-logo.png"}
-                  width={426}
-                  height={162}
-                  alt="Alsadarah Logo"
-                  className="w-32"
-                />
-              </Link>
-            </motion.div>
-            <motion.div
-              initial={"hidden"}
-              variants={{
-                hidden: { opacity: 0, x: 20 },
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                  transition: {
-                    duration: 1,
-                  },
-                },
-              }}
-              viewport={{ once: true }}
-              whileInView={"visible"}
-              className="lg:block hidden"
-            >
-              <Navbar />
-            </motion.div>
-          </div>
+          <Header />
           <div className="flex gap-x-3 my-16">
             <button
               type="button"

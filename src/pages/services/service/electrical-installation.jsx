@@ -7,6 +7,7 @@ import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
+import Header from "@/components/Header";
 
 export default function ServicePowerSystem() {
   const list = {
@@ -48,52 +49,7 @@ export default function ServicePowerSystem() {
       >
         <div className="relative constrained-padded">
           <div className="constrained-padded z-10 absolute w-full h-full py-10 left-0">
-            <div className="flex justify-between items-center ">
-              <motion.div
-                initial={"hidden"}
-                variants={{
-                  hidden: { opacity: 0, x: -20 },
-                  visible: {
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      duration: 1,
-                    },
-                  },
-                }}
-                viewport={{ once: true }}
-                whileInView={"visible"}
-                className=""
-              >
-                <Link href={"/"}>
-                  <Image
-                    src={"/alsadarah-logo.png"}
-                    width={426}
-                    height={162}
-                    alt="Alsadarah Logo"
-                    className="w-32"
-                  />
-                </Link>
-              </motion.div>
-              <motion.div
-                initial={"hidden"}
-                variants={{
-                  hidden: { opacity: 0, x: 20 },
-                  visible: {
-                    opacity: 1,
-                    x: 0,
-                    transition: {
-                      duration: 1,
-                    },
-                  },
-                }}
-                viewport={{ once: true }}
-                whileInView={"visible"}
-                className="lg:block hidden"
-              >
-                <Navbar />
-              </motion.div>
-            </div>
+            <Header />
 
             <div className="lg:mt-48 mt-10 text-end">
               <div className="inline-block">
