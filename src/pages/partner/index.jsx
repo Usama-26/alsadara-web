@@ -5,11 +5,9 @@ import PartnerHero from "@/components/Hero/PartnerHero";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
-import FileDropzone from "@/components/FileDropzone";
 import { useState } from "react";
 export default function Partner() {
   const [files, setFiles] = useState();
-  console.log(files);
   return (
     <AnimatePresence>
       <motion.section
@@ -110,7 +108,7 @@ export default function Partner() {
         </div>
         <div className="constrained-padded border-b-2 max-w-6xl border-gray-400"></div>
         <div className="constrained-padded my-10">
-          <FileDropzone files={files} setFiles={setFiles} />
+          {/* <FileDropzone files={files} setFiles={setFiles} /> */}
         </div>
         <div className="text-center">
           <button

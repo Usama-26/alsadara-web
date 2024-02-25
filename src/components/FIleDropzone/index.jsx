@@ -1,4 +1,3 @@
-import { ArrowUpTrayIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React, { useState } from "react";
 import Dropzone from "react-dropzone";
