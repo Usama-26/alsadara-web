@@ -46,13 +46,13 @@ export default function Header({}) {
             animate={"visible"}
             variants={menuVariants}
             exit={"hidden"}
-            className="fixed inset-0 w-full h-full bg-primary overflow-hidden"
+            className="lg:hidden block fixed inset-0 w-full h-full bg-primary overflow-hidden"
           >
             <motion.div className="h-full flex flex-col border border-red-400 px-8">
               <motion.ul className="mt-auto text-2xl space-y-4 my-8 text-white">
                 {navItems.map((item, index) => (
                   <motion.li key={index} variants={itemVariants}>
-                    <Link href={item.link} className="text-5xl font-display">
+                    <Link href={item.link} className="text-4xl ">
                       {item.label}
                     </Link>
                   </motion.li>
@@ -105,7 +105,7 @@ export default function Header({}) {
         whileInView={"visible"}
         className=""
       >
-        <Link href={"/"}>
+        <Link href={"/"} className="relative z-20">
           <Image
             src={"/alsadarah-logo.png"}
             width={426}

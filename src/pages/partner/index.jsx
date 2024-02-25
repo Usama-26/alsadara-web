@@ -2,7 +2,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import CTA from "@/components/Home/CTA";
 import Footer from "@/components/Footer";
 import PartnerHero from "@/components/Hero/PartnerHero";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import FileDropzone from "@/components/FileDropzone";
+import { useState } from "react";
 export default function Partner() {
+  const [files, setFiles] = useState();
+  console.log(files);
   return (
     <AnimatePresence>
       <motion.section
@@ -21,10 +28,97 @@ export default function Partner() {
             </h3>
           </div>
         </div>
-        <div className="constrained-padded flex lg:translate-y-40 translate-y-20">
+        <div className="constrained-padded flex ">
           <h3 className="font-display lg:text-xl text-sm">
             For any query, please feel free to contact us
           </h3>
+        </div>
+        <div className="constrained-padded">
+          <div className="my-4 space-y-2 max-w-sm">
+            <Link
+              target="_blank"
+              download
+              href="/files/NON Bankrubtcy Declaration.docx"
+              className="flex items-center gap-x-2 font-medium p-4 text-sm rounded-lg hover:shadow bg-gray-100"
+            >
+              <Image
+                src={"/icons/pdf-icon.svg"}
+                height={200}
+                width={200}
+                className="w-10 h-10"
+                alt="word-icon"
+              />
+              <span>Guide For Vendors.pdf</span>
+              <span className="ml-auto pl-10">
+                <ArrowDownTrayIcon className="w-5 h-5 stroke-primary" />
+              </span>
+            </Link>
+            <Link
+              target="_blank"
+              download
+              href="/files/guide-for-vendors.pdf"
+              className="flex items-center gap-x-2 font-medium p-4 text-sm rounded-lg hover:shadow bg-gray-100"
+            >
+              <Image
+                src={"/icons/word-icon.svg"}
+                height={200}
+                width={200}
+                className="w-10 h-10"
+                alt="word-icon"
+              />
+              <span>NON Bankrubtcy Declaration.docx</span>
+              <span className="ml-auto pl-10">
+                <ArrowDownTrayIcon className="w-5 h-5 stroke-primary" />
+              </span>
+            </Link>
+            <Link
+              target="_blank"
+              download
+              href="/files/NON Bankrubtcy Declaration.docx"
+              className="flex items-center gap-x-2 font-medium p-4 text-sm rounded-lg hover:shadow bg-gray-100"
+            >
+              <Image
+                src={"/icons/excel-icon.svg"}
+                height={200}
+                width={200}
+                className="w-10 h-10"
+                alt="word-icon"
+              />
+              <span>VRF - ALS2298582R34.xlsx</span>
+              <span className="ml-auto pl-10">
+                <ArrowDownTrayIcon className="w-5 h-5 stroke-primary" />
+              </span>
+            </Link>
+          </div>
+        </div>
+        <div className="constrained-padded my-10">
+          <div className="max-w-sm flex items-center gap-x-4">
+            <div className="rounded-full p-3 border border-gray-300">
+              <Image
+                src={"/icons/cloud-add.svg"}
+                height={200}
+                width={200}
+                className="w-10 h-10"
+                alt="word-icon"
+              />
+            </div>
+            <div className="text-sm">
+              <h4 className="font-semibold text-lg">Upload Files</h4>
+              <h6>Select and upload the files oof your choice</h6>
+            </div>
+          </div>
+        </div>
+        <div className="constrained-padded border-b-2 max-w-6xl border-gray-400"></div>
+        <div className="constrained-padded my-10">
+          <FileDropzone files={files} setFiles={setFiles} />
+        </div>
+        <div className="text-center">
+          <button
+            type="submit"
+            className="px-8 py-2 rounded-full bg-primary hover:bg-primary-light text-white font-medium"
+          >
+            Submit
+          </button>
         </div>
         <CTA />
         <Footer />

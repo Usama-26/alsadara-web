@@ -2,8 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useScroll } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function AboutUs({}) {
+  const router = useRouter();
+  const pathname = router?.pathname || "";
   const { scrollYProgress } = useScroll();
   const textVariants = {
     hidden: { opacity: 0, y: 10 },
@@ -114,12 +117,14 @@ export default function AboutUs({}) {
                 solutions creator.
               </motion.p>
             </div>
-            <Link
-              href={"aboutus"}
-              className="rounded-full px-6 py-2 text-white bg-primary-light lg:text-base text-sm font-medium"
-            >
-              Read More
-            </Link>
+            {pathname.includes("aboutus") ? null : (
+              <Link
+                href={"aboutus"}
+                className="rounded-full px-6 py-2 text-white bg-primary-light lg:text-base text-sm font-medium"
+              >
+                Read More
+              </Link>
+            )}
           </div>
           <div className="basis-2/5 relative">
             <Image

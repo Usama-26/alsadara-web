@@ -46,7 +46,7 @@ export default function Services({}) {
                   </p>
                   <div>
                     <Link
-                      href={"#"}
+                      href={"/services"}
                       className="group tracking-wider font-bold uppercase inline-flex gap-x-2 items-center"
                     >
                       <span>View All Services</span>
@@ -87,7 +87,7 @@ export default function Services({}) {
                   </p>
                   <div>
                     <Link
-                      href={"#"}
+                      href={"/services/service/power-system"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
                       <span>Learn More</span>
@@ -129,7 +129,7 @@ export default function Services({}) {
                   </p>
                   <div>
                     <Link
-                      href={"#"}
+                      href={"/services/service/facility-management"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
                       <span>Learn More</span>
@@ -171,7 +171,7 @@ export default function Services({}) {
                   </p>
                   <div>
                     <Link
-                      href={"#"}
+                      href={"/services/service/operation-maintenance"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
                       <span>Learn More</span>
@@ -213,7 +213,7 @@ export default function Services({}) {
                   </p>
                   <div>
                     <Link
-                      href={"#"}
+                      href={"/services/service/mep-solutions"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
                       <span>Learn More</span>
@@ -255,7 +255,7 @@ export default function Services({}) {
                   </p>
                   <div>
                     <Link
-                      href={"#"}
+                      href={"/services/service/electrical-installation"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
                       <span>Learn More</span>
