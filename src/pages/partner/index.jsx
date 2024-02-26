@@ -6,8 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowDownTrayIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-import FileDropzone from "@/components/FileDropzone";
 import FileIcon from "@/components/FileType";
+import FileDropzone from "@/helpers/FileDropzone";
 export default function Partner() {
   const [files, setFiles] = useState([]);
 
