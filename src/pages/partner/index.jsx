@@ -4,10 +4,19 @@ import Footer from "@/components/Footer";
 import PartnerHero from "@/components/Hero/PartnerHero";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { ArrowDownTrayIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import FileDropzone from "@/components/FileDropzone";
+import FileIcon from "@/components/FileType";
 export default function Partner() {
-  const [files, setFiles] = useState();
+  const [files, setFiles] = useState([]);
+
+  const deleteFile = (index) => {
+    const updatedFiles = [...files];
+    updatedFiles.splice(index, 1);
+    setFiles(updatedFiles);
+  };
+
   return (
     <AnimatePresence>
       <motion.section
@@ -26,17 +35,12 @@ export default function Partner() {
             </h3>
           </div>
         </div>
-        <div className="constrained-padded flex ">
-          <h3 className="font-display lg:text-xl text-sm">
-            For any query, please feel free to contact us
-          </h3>
-        </div>
         <div className="constrained-padded">
           <div className="my-4 space-y-2 max-w-sm">
             <Link
               target="_blank"
               download
-              href="/files/NON Bankrubtcy Declaration.docx"
+              href="/files/guide-for-vendors.pdf"
               className="flex items-center gap-x-2 font-medium p-4 text-sm rounded-lg hover:shadow bg-gray-100"
             >
               <Image
@@ -54,7 +58,7 @@ export default function Partner() {
             <Link
               target="_blank"
               download
-              href="/files/guide-for-vendors.pdf"
+              href="/files/non-bankruptcy-declaration.docx"
               className="flex items-center gap-x-2 font-medium p-4 text-sm rounded-lg hover:shadow bg-gray-100"
             >
               <Image
@@ -72,7 +76,7 @@ export default function Partner() {
             <Link
               target="_blank"
               download
-              href="/files/NON Bankrubtcy Declaration.docx"
+              href="/files/VRF-ALS2298582R34.xlsx"
               className="flex items-center gap-x-2 font-medium p-4 text-sm rounded-lg hover:shadow bg-gray-100"
             >
               <Image
@@ -108,7 +112,26 @@ export default function Partner() {
         </div>
         <div className="constrained-padded border-b-2 max-w-6xl border-gray-400"></div>
         <div className="constrained-padded my-10">
-          {/* <FileDropzone files={files} setFiles={setFiles} /> */}
+          {files.length < 3 && (
+            <FileDropzone files={files} setFiles={setFiles} />
+          )}
+          <div className="space-y-2 my-5">
+            {files.length > 0 &&
+              files.map((file, index) => (
+                <div
+                  key={index}
+                  className="px-5 w-full justify-between flex gap-4 bg-gray-100  rounded-md"
+                >
+                  <div className="flex gap-4 p-4">
+                    <FileIcon fileType={file.type} />
+                    <p className="font-medium">{file.name}</p>
+                  </div>
+                  <button onClick={() => deleteFile(index)} type="button">
+                    <XCircleIcon className="w-6 h-6" />
+                  </button>
+                </div>
+              ))}
+          </div>
         </div>
         <div className="text-center">
           <button
@@ -119,7 +142,7 @@ export default function Partner() {
           </button>
         </div>
         <CTA />
-        <Footer />
+        <Footer padding={"lg:pt-40 pt-20"} />
       </motion.section>
     </AnimatePresence>
   );

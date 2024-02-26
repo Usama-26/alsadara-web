@@ -64,7 +64,7 @@
     @apply bg-no-repeat bg-top bg-cover bg-fixed;
   }
   .banner-bg {
-    background: url("/images/banner-bg.jpg");
+    background: url("/images/banner-bg.png");
     @apply bg-no-repeat bg-cover bg-fixed;
   }
   .about-hero-bg {
@@ -79,9 +79,17 @@
     background: url("/images/services/services-bg.jpg");
     @apply bg-no-repeat bg-top bg-cover bg-fixed;
   }
+  .contactus-hero-bg {
+    background: url("/images/contact-us-bg.jpg");
+    @apply bg-no-repeat bg-top bg-cover bg-fixed;
+  }
+  .portfolio-hero-bg {
+    background: url("/images/portfolio-bg.jpg");
+    @apply bg-no-repeat bg-top bg-cover bg-fixed;
+  }
   .power-system-hero-bg {
     background: url("/images/services/power-system-hero.jpg");
-    @apply bg-no-repeat bg-top bg-cover bg-fixed;
+    @apply bg-no-repeat bg-left bg-cover bg-fixed;
   }
   .electrical-installation-hero-bg {
     background: url("/images/services/electrical-installation-hero.jpg");

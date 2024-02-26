@@ -11,7 +11,14 @@ import {
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-export default function Footer() {
+const navItems = [
+  { label: "Home", link: "/" },
+  { label: "About Us", link: "/aboutus" },
+  { label: "Portfolio", link: "/portfolio" },
+  { label: "Become a Partners", link: "/partner" },
+];
+
+export default function Footer({ padding }) {
   const containerVariants = {
     hidden: { y: 50, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 1, delay: 0.2 } },
@@ -43,7 +50,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className=" lg:pt-40 pt-20 bg-primary-dark text-white">
+    <footer className={` ${padding} bg-primary-dark text-white`}>
       <motion.div
         initial={"hidden"}
         variants={containerVariants}
@@ -77,16 +84,25 @@ export default function Footer() {
               variants={itemVariants}
               className="flex items-center gap-x-4 text-base"
             >
-              <Link href={"#"}>
+              <Link target="_blank" href={"https://twitter.com/alsadaraco"}>
                 <FaXTwitter className="w-6 h-6 fill-white" />
               </Link>
-              <Link href="#">
+              <Link
+                target="_blank"
+                href="https://www.facebook.com/hashtag/alsadara/"
+              >
                 <FaFacebook className="w-6 h-6 fill-white" />
               </Link>
-              <Link href="#">
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/alsadaraco?igsh=MXFzejlqaXMxMHlybA=="
+              >
                 <FaInstagram className="w-6 h-6 fill-white" />
               </Link>
-              <Link href="#">
+              <Link
+                target="_blank"
+                href="https://www.linkedin.com/company/alsadara/"
+              >
                 <FaLinkedinIn className="w-6 h-6 fill-white" />
               </Link>
             </motion.div>
@@ -102,41 +118,19 @@ export default function Footer() {
                   initial="hidden"
                   variants={list}
                   whileInView={"visible"}
+                  // viewport={{ once: true }}
                   className="mt-4 space-y-2"
                 >
-                  <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
-                      className=" block hover:underline underline-offset-2"
-                    >
-                      Home
-                    </Link>
-                  </motion.li>
-
-                  <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
-                      className=" block hover:underline underline-offset-2"
-                    >
-                      About us
-                    </Link>
-                  </motion.li>
-                  <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
-                      className=" block hover:underline underline-offset-2"
-                    >
-                      Projects
-                    </Link>
-                  </motion.li>
-                  <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
-                      className=" block hover:underline underline-offset-2"
-                    >
-                      Become a Partner
-                    </Link>
-                  </motion.li>
+                  {navItems.map((item, index) => (
+                    <motion.li key={index} variants={itemVariants}>
+                      <Link
+                        href={item.link}
+                        className=" block hover:underline underline-offset-2"
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.li>
+                  ))}
                 </motion.ul>
               </div>
               <div className="lg:basis-1/3 basis-1/2">
@@ -148,6 +142,7 @@ export default function Footer() {
                   initial="hidden"
                   variants={list}
                   whileInView={"visible"}
+                  // viewport={{ once: true }}
                   className="mt-4 space-y-2"
                 >
                   <motion.li variants={itemVariants}>
@@ -202,6 +197,7 @@ export default function Footer() {
                   initial="hidden"
                   variants={list}
                   whileInView={"visible"}
+                  // viewport={{ once: true }}
                   className="mt-4 space-y-2"
                 >
                   <motion.li variants={itemVariants}>
@@ -241,6 +237,7 @@ export default function Footer() {
               initial="hidden"
               variants={list}
               whileInView={"visible"}
+              // viewport={{ once: true }}
               className="mt-4 space-y-2"
             >
               <motion.li variants={itemVariants}>
@@ -279,6 +276,7 @@ export default function Footer() {
         variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
         transition={{ duration: 1, delay: 0.5 }}
         whileInView={"visible"}
+        // viewport={{ once: true }}
         className="constrained-padded border-t py-4 text-center text-sm"
       >
         <h6>Copyright © 2024 alsadara. All right reserved.</h6>

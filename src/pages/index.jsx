@@ -25,7 +25,7 @@ export default function Home() {
         <OurProjects />
         <OurPartners />
         <CTA />
-        <Footer />
+        <Footer padding={"lg:pt-40 pt-20"} />
       </motion.section>
     </AnimatePresence>
   );

@@ -33,7 +33,7 @@ export default function AboutUs({}) {
           transition: { duration: 1, delay: 0.5 },
         }}
         // viewport={{ once: true }}
-        className="bg-gray-100 constrained-padded w-full rounded-3xl shadow-lg px-8 py-10 "
+        className="bg-white constrained-padded w-full rounded-3xl shadow-lg px-8 py-10 "
       >
         <div className="py-4 flex lg:flex-row flex-col gap-x-10 gap-y-16">
           <div className="basis-3/5">

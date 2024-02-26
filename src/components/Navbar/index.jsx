@@ -12,7 +12,7 @@ export default function Navbar() {
     { label: "Home", link: "/" },
     { label: "About Us", link: "/aboutus" },
     { label: "Services", link: "/services" },
-    { label: "Projects", link: "/projects" },
+    { label: "Portfolio", link: "/portfolio" },
     { label: "Partners", link: "/partner" },
     { label: "Contact Us", link: "/contact" },
   ];
@@ -38,9 +38,7 @@ export default function Navbar() {
             <Link
               href={item.link}
               onMouseEnter={() => handleMouseEnter(menuItemRefs[index])}
-              className={`${
-                pathname.startsWith(item.link) ? "bg-gray-200/20" : ""
-              }`}
+              className={`${pathname === item.link ? "bg-gray-200/20" : ""}`}
             >
               {item.label}
             </Link>

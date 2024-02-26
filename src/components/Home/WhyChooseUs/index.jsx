@@ -32,18 +32,18 @@ export default function WhyChooseUs({}) {
         initial={"hidden"}
         variants={containerVariants}
         whileInView={"visible"}
-        className="constrained-padded my-20"
+        className="constrained-padded py-20"
       >
         <h1 className="font-display text-3xl text-center">
           Why Choose Alsadara
         </h1>
-        <div className="my-10">
+        <div className="pt-20">
           <div className="flex">
             <motion.div
               initial={"hidden"}
               variants={leftVariants}
               whileInView={"visible"}
-              className="lg:block hidden basis-1/2"
+              className="lg:block hidden basis-5/12"
             >
               <div className="">
                 <Image
@@ -51,7 +51,7 @@ export default function WhyChooseUs({}) {
                   width={450}
                   height={604}
                   alt="Why Choose Us Image"
-                  className="w-96 mx-auto rounded-[2rem]"
+                  className="w-96 ml-auto rounded-[2rem]"
                 />
               </div>
             </motion.div>
@@ -59,7 +59,7 @@ export default function WhyChooseUs({}) {
               initial={"hidden"}
               variants={rightVariants}
               whileInView={"visible"}
-              className="lg:basis-1/2 lg:space-y-0 space-y-8"
+              className="lg:basis-7/12 lg:space-y-0 lg:ml-5 space-y-8"
             >
               <div className="flex lg:flex-row flex-col lg:text-left text-center">
                 <div className="basis-1/6 lg:mr-4 flex-shrink-0">

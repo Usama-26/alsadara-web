@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Dropzone from "react-dropzone";
 
-export default function FileDropzone({ files, setFiles, multiple = false }) {
+export default function FileDropzone({ files, setFiles, multiple = true }) {
   const [localFiles, setLocalFiles] = useState([]);
 
   const handleOnDrop = async (acceptedFiles) => {
@@ -14,16 +14,11 @@ export default function FileDropzone({ files, setFiles, multiple = false }) {
       ),
     ];
     setLocalFiles(accepted);
-    setFiles(accepted);
+    setFiles((prev) => [...prev, ...accepted]);
   };
 
   return (
-    <Dropzone
-      accept={["doc", "docx", "pdf", "xlsx"]}
-      onDrop={handleOnDrop}
-      maxFiles={3}
-      multiple={multiple}
-    >
+    <Dropzone onDrop={handleOnDrop} maxFiles={3} multiple={multiple}>
       {({ getRootProps, getInputProps }) => (
         <>
           <div
@@ -44,7 +39,8 @@ export default function FileDropzone({ files, setFiles, multiple = false }) {
               <h4 className="text-base font-bold">
                 Choose a file or drag & drop it here
               </h4>
-              <p>Pdf, Docs, and Xl formats</p>
+              <p>PDF, Docs, and Xl formats</p>
+              <p>Max Files : 3</p>
               <button
                 type="button"
                 className="px-8 py-2 rounded-md font-medium border border-gray-400"

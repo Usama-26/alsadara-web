@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import ServicesHero from "@/components/Hero/ServicesHero";
 import { ItemCard } from "@/components/Card";
 import PartnerCTA from "@/components/PartnerCTA";
+import CustomerCTA from "@/components/CustomerCTA";
 
 const services = [
   {
@@ -95,8 +96,8 @@ export default function Services() {
       >
         <ServicesHero />
         <div className="constrained-padded flex">
-          <div className="py-10">
-            <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
+          <div className="py-8 px-4">
+            <h3 className="font-display lg:text-2xl text-lg max-w-3xl">
               Services alsadara offers
             </h3>
           </div>
@@ -119,7 +120,7 @@ export default function Services() {
             ))}
           </motion.div>
         </div>
-        <PartnerCTA />
+        <CustomerCTA />
         <Footer />
       </motion.section>
     </AnimatePresence>

@@ -40,7 +40,7 @@ export default function OurProjects() {
       initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
       viewport={{ margin: "50px" }}
-      className="my-20"
+      className="py-20"
     >
       <div className="constrained-padded">
         <div className="space-y-2">

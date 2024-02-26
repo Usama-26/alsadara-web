@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function Accordion({ service }) {
   return (
-    <Disclosure as="div" key={service.heading} className="pt-6">
+    <Disclosure as="div" key={service.heading} className="">
       {({ open }) => (
         <div className={`px-4 rounded-md ${open ? "bg-primary-light/10" : ""}`}>
           <dt>

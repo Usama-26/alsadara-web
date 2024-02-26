@@ -27,17 +27,19 @@ const stats = [
 ];
 export default function Stats() {
   return (
-    <motion.div className="lg:pt-0 stats-bg">
-      <div className="bg-gray-900/70">
-        <div className="constrained-padded">
-          <div className="py-8 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 lg:gap-0 gap-8 text-white text-center">
-            {stats.map((stat, index) => (
-              <AnimatedStat key={index} stat={stat} index={index} />
-            ))}
+    <section className="py-20">
+      <motion.div className="lg:pt-0 stats-bg">
+        <div className="bg-gray-900/70">
+          <div className="constrained-padded">
+            <div className="py-8 grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 lg:gap-0 gap-8 text-white text-center">
+              {stats.map((stat, index) => (
+                <AnimatedStat key={index} stat={stat} index={index} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </section>
   );
 }
 

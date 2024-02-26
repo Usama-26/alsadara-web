@@ -11,7 +11,7 @@ const navItems = [
   { label: "Home", link: "/" },
   { label: "About Us", link: "/aboutus" },
   { label: "Services", link: "/services" },
-  { label: "Projects", link: "/projects" },
+  { label: "Portfolio", link: "/portfolio" },
   { label: "Partners", link: "/partner" },
   { label: "Contact Us", link: "/contact" },
 ];
@@ -48,17 +48,20 @@ export default function Header({}) {
             exit={"hidden"}
             className="lg:hidden block fixed inset-0 w-full h-full bg-primary overflow-hidden"
           >
-            <motion.div className="h-full flex flex-col border border-red-400 px-8">
-              <motion.ul className="mt-auto text-2xl space-y-4 my-8 text-white">
+            <motion.div className="h-full flex flex-col justify-center items-center border border-red-400 px-8">
+              <motion.ul className="mt-auto text-2xl space-y-8 mb-40 text-white">
                 {navItems.map((item, index) => (
                   <motion.li key={index} variants={itemVariants}>
-                    <Link href={item.link} className="text-4xl ">
+                    <Link
+                      href={item.link}
+                      className="w-full inline-block text-4xl text-center "
+                    >
                       {item.label}
                     </Link>
                   </motion.li>
                 ))}
                 <motion.li variants={itemVariants}>
-                  <div className="flex justify-center mt-8 mb-4 gap-x-3">
+                  <div className="flex justify-center mt-12 mb-4 gap-x-3">
                     <button
                       type="button"
                       className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"

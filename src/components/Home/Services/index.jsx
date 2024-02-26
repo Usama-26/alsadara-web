@@ -21,7 +21,7 @@ export default function Services({}) {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          viewport={{ amount: 0.3, margin: "50px" }}
+          viewport={{ amount: 0.3, margin: "50px", once: true }}
           className="services-bg"
         >
           <div className="bg-primary/90 py-10 px-4 text-white">
@@ -31,6 +31,7 @@ export default function Services({}) {
                 custom={0}
                 whileInView={"visible"}
                 variants={itemVariants}
+                // viewport={{ once: true }}
                 className="relative group lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
@@ -62,6 +63,7 @@ export default function Services({}) {
                 custom={1}
                 whileInView={"visible"}
                 variants={itemVariants}
+                // viewport={{ once: true }}
                 className="relative group lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
@@ -103,6 +105,7 @@ export default function Services({}) {
                 custom={2}
                 whileInView={"visible"}
                 variants={itemVariants}
+                // viewport={{ once: true }}
                 className="relative group lg:px-12 px-4 py-4 border-b border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
@@ -145,6 +148,7 @@ export default function Services({}) {
                 custom={3}
                 whileInView={"visible"}
                 variants={itemVariants}
+                // viewport={{ once: true }}
                 className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
@@ -187,6 +191,7 @@ export default function Services({}) {
                 custom={4}
                 whileInView={"visible"}
                 variants={itemVariants}
+                // viewport={{ once: true }}
                 className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
@@ -229,6 +234,7 @@ export default function Services({}) {
                 custom={5}
                 whileInView={"visible"}
                 variants={itemVariants}
+                // viewport={{ once: true }}
                 className="relative group lg:px-12 px-4 py-4 border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>

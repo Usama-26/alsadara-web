@@ -9,6 +9,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Accordion from "@/components/Accordion";
 import Header from "@/components/Header";
+import CustomerCTA from "@/components/CustomerCTA";
 
 const services = [
   {
@@ -135,9 +136,9 @@ export default function ServicePowerSystem() {
             </div>
           </div>
         </section>
-        <div className="constrained-padded py-10 space-y-10">
+        <div className="constrained-padded py-8 space-y-10">
           <div className="">
-            <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
+            <h3 className="font-display lg:text-2xl text-xl mb-4  max-w-3xl">
               Power System
             </h3>
             <p>
@@ -150,19 +151,17 @@ export default function ServicePowerSystem() {
             </p>
           </div>
           <div className="">
-            <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
-              Services
-            </h3>
+            <h3 className="font-display lg:text-2xl text-xl ">Services</h3>
           </div>
         </div>
-        <div className="constrained-padded py-10">
-          <div className="flex flex-col flex-wrap h-screen gap-4">
+        <div className="constrained-padded">
+          <div className=" space-y-4">
             {services.map((service, index) => (
               <Accordion key={index} index={index} service={service} />
             ))}
           </div>
         </div>
-        <PartnerCTA />
+        <CustomerCTA />
         <Footer />
       </motion.section>
     </AnimatePresence>

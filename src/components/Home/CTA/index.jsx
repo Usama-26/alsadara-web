@@ -29,6 +29,7 @@ export default function CTA({}) {
           initial={"hidden"}
           variants={leftVariants}
           whileInView={"visible"}
+          // viewport={{ once: true }}
           className="lg:block hidden lg:basis-1/2 shadow-lg rounded-l-3xl"
         >
           <Image
@@ -43,6 +44,7 @@ export default function CTA({}) {
           initial={"hidden"}
           variants={rightVariants}
           whileInView={"visible"}
+          // viewport={{ once: true }}
           className="lg:basis-1/2 bg-gray-100 lg:rounded-r-3xl lg:rounded-none rounded-3xl shadow-lg"
         >
           <div className="py-6">
@@ -55,36 +57,38 @@ export default function CTA({}) {
                 name="full_name"
                 id="fullName"
                 placeholder="Full Name"
-                className="w-full rounded-full py-4 px-6 border border-gray-200 bg-white "
+                className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white "
               />
               <input
                 type="text"
                 name="phone"
                 id="phone"
                 placeholder="Phone"
-                className="w-full rounded-full py-4 px-6 border border-gray-200 bg-white "
+                className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white "
               />
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Email Address"
-                className="w-full rounded-full py-4 px-6 border border-gray-200 bg-white "
+                className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white "
               />
               <select
                 name="subject"
                 id="subject"
                 placeholder="Subject"
-                className="w-full rounded-full py-4 px-6 border border-gray-200 bg-white "
+                className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white "
               >
-                <option value="select">Subject</option>
+                <option value="select" className="">
+                  Subject
+                </option>
               </select>
               <textarea
                 name="message"
                 id="message"
                 placeholder="Your Message"
                 rows={10}
-                className="w-full rounded-2xl px-6 py-4 border border-gray-200 bg-white resize-none "
+                className="w-full rounded-2xl px-6 py-3 border border-gray-200 bg-white resize-none "
               />
               <div className="text-center">
                 <button

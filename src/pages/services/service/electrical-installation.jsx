@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
+import CustomerCTA from "@/components/CustomerCTA";
 
 export default function ServicePowerSystem() {
   const list = {
@@ -115,7 +116,7 @@ export default function ServicePowerSystem() {
           </div>
         </div>
 
-        <PartnerCTA />
+        <CustomerCTA />
         <Footer />
       </motion.section>
     </AnimatePresence>
