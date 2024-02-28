@@ -44,15 +44,12 @@ export default function OurProjects() {
     >
       <div className="constrained-padded">
         <div className="space-y-2">
-          <h6 className="text-center text-primary-light font-display">
-            Our Projects
-          </h6>
           <h1 className="font-display lg:text-3xl text-xl text-center capitalize">
-            Have a Look at Our Projects
+            Our Portfolio
           </h1>
           <p className="text-center max-w-2xl  mx-auto text-sm lg:text-base">
             {
-              "Explore our portfolio of innovative projects, showcasing our expertise, creativity, and the impactful solutions we've delivered to different businesses like yours."
+              "Explore our portfolio of innovative projects, showcasing our expertise, creativity, and the  impactful solutions we've delivered to different businesses  like yours."
             }
           </p>
         </div>

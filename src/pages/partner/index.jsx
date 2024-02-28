@@ -10,11 +10,45 @@ import FileIcon from "@/components/FileType";
 import FileDropzone from "@/helpers/FileDropzone";
 export default function Partner() {
   const [files, setFiles] = useState([]);
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState("");
 
   const deleteFile = (index) => {
     const updatedFiles = [...files];
     updatedFiles.splice(index, 1);
     setFiles(updatedFiles);
+  };
+
+  const submitFiles = async () => {
+    setError("");
+    setSuccess("");
+    setIsLoading(true);
+
+    const formData = new FormData();
+
+    files.forEach((file, index) => {
+      formData.append(`attachments`, file);
+    });
+
+    try {
+      const response = await fetch("/api/file-submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        console.log("Files submitted successfully!");
+        setSuccess(response.message);
+        setIsLoading(false);
+      } else {
+        console.error("Failed to submit files");
+      }
+    } catch (error) {
+      setError(error.error);
+      setIsLoading(false);
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -135,10 +169,10 @@ export default function Partner() {
         </div>
         <div className="text-center">
           <button
-            type="submit"
+            onClick={submitFiles}
             className="px-8 py-2 rounded-full bg-primary hover:bg-primary-light text-white font-medium"
           >
-            Submit
+            {isLoading ? "Sending..." : success ? "Submitted" : "Submit"}
           </button>
         </div>
         <CTA />
