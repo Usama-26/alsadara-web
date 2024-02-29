@@ -96,7 +96,7 @@ export default function CTA({}) {
           variants={rightVariants}
           whileInView={"visible"}
           // viewport={{ once: true }}
-          className="lg:basis-1/2 bg-gray-100 lg:rounded-r-3xl lg:rounded-none rounded-3xl shadow-lg"
+          className="lg:basis-1/2 basis-full bg-gray-100 lg:rounded-r-3xl lg:rounded-none rounded-3xl shadow-lg"
         >
           <div className="py-6">
             <h1 className="font-display text-3xl text-center capitalize">
