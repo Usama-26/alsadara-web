@@ -161,7 +161,7 @@ export default function Partner() {
               <FileDropzone files={files} setFiles={setFiles} />
             )}
           </div>
-          <div className="space-y-2 my-5">
+          <div className="space-y-2 m-5">
             {files.length > 0 &&
               files.map((file, index) => (
                 <div
