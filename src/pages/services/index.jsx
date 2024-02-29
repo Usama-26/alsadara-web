@@ -44,7 +44,7 @@ const services = [
   },
   {
     name: "Bio Medical Maintenance",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    desc: "We're a leading company specializing in medical device maintenance. With skilled technicians, we offer comprehensive solutions for optimal performance.",
     href: "/services/service/bio-medical-maintenance",
     img: "/images/services/bio-medical-maintenance.jpg",
   },

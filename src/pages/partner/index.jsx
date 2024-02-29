@@ -8,16 +8,25 @@ import { ArrowDownTrayIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import FileIcon from "@/components/FileType";
 import FileDropzone from "@/helpers/FileDropzone";
+import MyModal from "@/components/Modal";
+
 export default function Partner() {
   const [files, setFiles] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState("");
+  const [show, setShow] = useState(false);
 
   const deleteFile = (index) => {
     const updatedFiles = [...files];
     updatedFiles.splice(index, 1);
     setFiles(updatedFiles);
+  };
+
+  const closeMessage = () => {
+    setShow(false);
+    setSuccess("");
+    setError("");
   };
 
   const submitFiles = async () => {
@@ -38,14 +47,15 @@ export default function Partner() {
       });
 
       if (response.ok) {
-        console.log("Files submitted successfully!");
-        setSuccess(response.message);
+        console.log(response);
+        setSuccess("Files Submitted Successfully.");
+        setShow(true);
         setIsLoading(false);
       } else {
-        console.error("Failed to submit files");
+        console.error("Failed to submit files.");
       }
     } catch (error) {
-      setError(error.error);
+      setError("Something went wrong. Please Try Again.");
       setIsLoading(false);
       console.error("Error:", error);
     }
@@ -146,9 +156,11 @@ export default function Partner() {
         </div>
         <div className="constrained-padded border-b-2 max-w-6xl border-gray-400"></div>
         <div className="constrained-padded my-10">
-          {files.length < 3 && (
-            <FileDropzone files={files} setFiles={setFiles} />
-          )}
+          <div className="px-5">
+            {files.length < 3 && (
+              <FileDropzone files={files} setFiles={setFiles} />
+            )}
+          </div>
           <div className="space-y-2 my-5">
             {files.length > 0 &&
               files.map((file, index) => (
@@ -170,6 +182,7 @@ export default function Partner() {
         <div className="text-center">
           <button
             onClick={submitFiles}
+            disabled={files.length === 0}
             className="px-8 py-2 rounded-full bg-primary hover:bg-primary-light text-white font-medium"
           >
             {isLoading ? "Sending..." : success ? "Submitted" : "Submit"}
@@ -178,6 +191,22 @@ export default function Partner() {
         <CTA />
         <Footer padding={"lg:pt-40 pt-20"} />
       </motion.section>
+      {success && (
+        <MyModal
+          open={show}
+          setOpen={closeMessage}
+          heading={"Success"}
+          message={success}
+        />
+      )}
+      {error && (
+        <MyModal
+          open={show}
+          setOpen={closeMessage}
+          heading={"Oops!"}
+          message={error}
+        />
+      )}
     </AnimatePresence>
   );
 }

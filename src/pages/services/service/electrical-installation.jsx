@@ -1,16 +1,57 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "@/components/Footer";
-import ServicesHero from "@/components/Hero/ServicesHero";
-import { ItemCard } from "@/components/Card";
-import PartnerCTA from "@/components/PartnerCTA";
 import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import Navbar from "@/components/Navbar";
-import Link from "next/link";
-import Image from "next/image";
 import Header from "@/components/Header";
 import CustomerCTA from "@/components/CustomerCTA";
+import { useState } from "react";
+import Accordion from "@/components/Accordion";
+import Link from "next/link";
 
-export default function ServicePowerSystem() {
+const services = [
+  {
+    heading: "High-Voltage Power Solutions",
+    details:
+      "Specializing in 13.8kV / 33kV electrical reticulation, transformers, and RMU installations.",
+  },
+
+  {
+    heading: "240V / 400V Complete Electrical Installations",
+    details:
+      "Comprehensive installations covering low-voltage (240V) to medium-voltage (400V)",
+  },
+  {
+    heading: "Servicing & Maintenance",
+    details: "General servicing for safe and efficient commercial properties.",
+  },
+  {
+    heading: "Lightning & Surge Protection",
+    details:
+      "Expertise in lightning and surge protection, offering testing, design, and installation services.",
+  },
+  {
+    heading: "Full Electrical Construction Services",
+    details:
+      "End-to-end electrical construction services, handling design, installation, testing, and certification for a seamless and compliant outcome.",
+  },
+  {
+    heading: "Cable splicing (Joint) and Terminations    ",
+    details:
+      "We offer professional cable jointing and termination services, including both hot and cold methods, to ensure reliable and efficient power transmission. Our skilled technicians excel in preparing, connecting, insulating, and testing electrical cables for optimal performance and durability.",
+  },
+  {
+    heading: "Busbar Installations",
+    details:
+      "Comprehensive training sessions covering a wide range of electrical topics.",
+  },
+  {
+    heading: "Single Phase to Masters Compliance Certificates (CoC’s)",
+    details:
+      "Providing compliance certificates for single-phase and master electrical systems, ensuring regulatory standards and operational safety.",
+  },
+];
+
+export default function ElectricalInstallation() {
+  const [openIndex, setOpenIndex] = useState(null);
   const list = {
     visible: {
       opacity: 1,
@@ -55,24 +96,29 @@ export default function ServicePowerSystem() {
             <div className="lg:mt-48 mt-10 text-end">
               <div className="inline-block">
                 <div className="flex flex-col gap-y-3">
-                  <button
-                    type="button"
+                  <Link
+                    href={"https://twitter.com/alsadaraco"}
+                    target="_blank"
                     className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                   >
                     <FaXTwitter />
-                  </button>
-                  <button
-                    type="button"
+                  </Link>
+                  <Link
+                    href={"https://www.linkedin.com/company/alsadara/"}
+                    target="_blank"
                     className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                   >
                     <FaLinkedinIn />
-                  </button>
-                  <button
-                    type="button"
+                  </Link>
+                  <Link
+                    href={
+                      "https://www.instagram.com/alsadaraco?igsh=MXFzejlqaXMxMHlybA=="
+                    }
+                    target="_blank"
                     className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                   >
                     <FaInstagram />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -87,7 +133,7 @@ export default function ServicePowerSystem() {
                   <h1 className="font-display font-bold lg:text-5xl text-3xl ">
                     Electrical Installation
                   </h1>
-                  <p className="lg:text-base text-sm">
+                  <p className="lg:text-base text-sm max-w-md mx-auto">
                     Shaping the future of global energy systems with a{" "}
                     <br className="hidden lg:block" /> decade of power system
                     expertise.
@@ -113,6 +159,19 @@ export default function ServicePowerSystem() {
             <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
               Services
             </h3>
+          </div>
+        </div>
+        <div className="constrained-padded">
+          <div className="mb-20 space-y-4">
+            {services.map((service, index) => (
+              <Accordion
+                key={index}
+                index={index}
+                openIndex={openIndex}
+                service={service}
+                setOpenIndex={setOpenIndex}
+              />
+            ))}
           </div>
         </div>
 

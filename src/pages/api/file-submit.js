@@ -17,8 +17,8 @@ const sendEmail = async (files) => {
   try {
     // Construct the email message
     const mailOptions = {
-      from: "contact@alsadara.com",
-      to: "daniyalrasheed343@gmail.com",
+      from: "partner@alsadara.com",
+      to: "supplychain@alsadaraco.com",
       subject: "Files Submission",
       text: "Files received from partner.",
       attachments: files.map((file) => ({

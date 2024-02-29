@@ -7,6 +7,15 @@ const images = [
   "/images/partners/partner-3.png",
   "/images/partners/partner-4.png",
   "/images/partners/partner-5.png",
+  "/images/partners/partner-6.png",
+  "/images/partners/partner-7.png",
+  "/images/partners/partner-8.png",
+  "/images/partners/partner-19.png",
+  "/images/partners/partner-11.png",
+  "/images/partners/partner-12.png",
+  "/images/partners/partner-13.png",
+  "/images/partners/partner-14.png",
+  "/images/partners/partner-15.png",
 ];
 
 import { motion } from "framer-motion";

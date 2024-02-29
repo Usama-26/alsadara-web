@@ -41,8 +41,8 @@ export default function Services({}) {
                   </h1>
                   <span className="inline-block border-b border-t-4 border-white w-10 h-1"></span>
                   <p className="text-gray-200 leading-relaxed">
-                    Over 24 years experience & knowledge of international
-                    industrial systems, dedicated to provide the best economical
+                    Over 11 years experience & knowledge of international
+                    industrial systems, dedicated to provide the best power
                     solutions.
                   </p>
                   <div>
@@ -84,8 +84,8 @@ export default function Services({}) {
                     Power System Studies
                   </h2>
                   <p className="text-gray-200 leading-relaxed">
-                    Denouncing pleasure and praising pain was born give you a
-                    complete...
+                    With a decade of experience in power system studies and
+                    operations...
                   </p>
                   <div>
                     <Link
@@ -127,8 +127,8 @@ export default function Services({}) {
                     Facility Management
                   </h2>
                   <p className="text-gray-200 leading-relaxed">
-                    Denouncing pleasure and praising pain was born give you a
-                    complete...
+                    With a decade of experience in power system studies and
+                    operations...
                   </p>
                   <div>
                     <Link
@@ -170,8 +170,8 @@ export default function Services({}) {
                     Operation & Maintenance Solution
                   </h2>
                   <p className="text-gray-200 leading-relaxed">
-                    Denouncing pleasure and praising pain was born give you a
-                    complete...
+                    alsadara&apos;s dedicated team provides advanced maintenance
+                    services...
                   </p>
                   <div>
                     <Link
@@ -213,8 +213,8 @@ export default function Services({}) {
                     MEP Solution
                   </h2>
                   <p className="text-gray-200 leading-relaxed">
-                    Denouncing pleasure and praising pain was born give you a
-                    complete...
+                    alsadara MEP, our subsidiary, specializes in delivering
+                    high-quality services...
                   </p>
                   <div>
                     <Link
@@ -256,8 +256,8 @@ export default function Services({}) {
                     Electrical Installation
                   </h2>
                   <p className="text-gray-200 leading-relaxed">
-                    Denouncing pleasure and praising pain was born give you a
-                    complete...
+                    Improper installation poses safety risks and reduces
+                    functionality....
                   </p>
                   <div>
                     <Link

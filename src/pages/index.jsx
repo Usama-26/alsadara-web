@@ -23,6 +23,23 @@ export default function Home() {
         <Services />
         <WhyChooseUs />
         <OurProjects />
+        <motion.section
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
+          viewport={{ margin: "50px" }}
+          className="py-20"
+        >
+          <div className="constrained-padded">
+            <div className="space-y-2 mb-10">
+              <h1 className="font-display lg:text-3xl text-xl text-center capitalize">
+                Geographical Location
+              </h1>
+            </div>
+          </div>
+          <div>
+            <img src={"/images/home/map.png"} />
+          </div>
+        </motion.section>
         <OurPartners />
         <CTA />
         <Footer padding={"lg:pt-40 pt-20"} />

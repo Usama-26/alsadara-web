@@ -10,7 +10,7 @@ export default function PartnerCTA({}) {
               To become a partner of alsadara feel free to contact us today
             </h1>
             <div>
-              <Link href="partner" className="border-b border-gray-600">
+              <Link href="partner" className="border-b border-gray-200">
                 Become a partner
               </Link>
             </div>

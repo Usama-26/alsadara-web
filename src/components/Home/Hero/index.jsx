@@ -53,24 +53,29 @@ export default function Hero({}) {
           <div className="text-end">
             <div className="inline-block">
               <div className="flex flex-col gap-y-3">
-                <button
-                  type="button"
+                <Link
+                  href={"https://twitter.com/alsadaraco"}
+                  target="_blank"
                   className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                 >
                   <FaXTwitter />
-                </button>
-                <button
-                  type="button"
+                </Link>
+                <Link
+                  href={"https://www.linkedin.com/company/alsadara/"}
+                  target="_blank"
                   className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                 >
                   <FaLinkedinIn />
-                </button>
-                <button
-                  type="button"
+                </Link>
+                <Link
+                  href={
+                    "https://www.instagram.com/alsadaraco?igsh=MXFzejlqaXMxMHlybA=="
+                  }
+                  target="_blank"
                   className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                 >
                   <FaInstagram />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

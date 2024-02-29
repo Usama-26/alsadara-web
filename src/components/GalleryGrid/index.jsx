@@ -12,6 +12,7 @@ export function GalleryGrid({ images }) {
         <Gallery
           images={images}
           margin={4}
+          rowHeight={300}
           enableImageSelection={false}
           onClick={handleClick}
         />

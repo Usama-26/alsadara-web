@@ -6,6 +6,8 @@ import AboutUs from "@/components/Home/Aboutus";
 import Image from "next/image";
 import Link from "next/link";
 import PartnerCTA from "@/components/PartnerCTA";
+import Lightbox from "yet-another-react-lightbox";
+import { useState } from "react";
 
 const values = [
   {
@@ -29,7 +31,28 @@ const values = [
     desc: "We are fully dedicated to the timely and budget-friendly delivery of our services while maintaining the highest quality standards",
   },
 ];
+
+const images = [
+  {
+    src: "/images/achievements/environment-management.jpg",
+    width: "385",
+    height: "498",
+  },
+  {
+    src: "/images/achievements/safety-management.jpg",
+    width: "385",
+    height: "498",
+  },
+  {
+    src: "/images/achievements/quality-management.jpg",
+    width: "385",
+    height: "498",
+  },
+];
 export default function Aboutus() {
+  const [index, setIndex] = useState(-1);
+  const [open, setOpen] = useState(false);
+  const handleClick = (index) => setIndex(index);
   const containerVariants = {
     hidden: { y: 50, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 1, delay: 0.2 } },
@@ -185,6 +208,10 @@ export default function Aboutus() {
               <motion.div variants={xSlideVariants} className="space-y-4 p-4">
                 <Image
                   src={`/images/achievements/environment-management.jpg`}
+                  onClick={() => {
+                    setOpen(true);
+                    setIndex(0);
+                  }}
                   height={498}
                   width={385}
                   alt="Enivronment Management"
@@ -198,6 +225,10 @@ export default function Aboutus() {
               <motion.div variants={xSlideVariants} className="space-y-4 p-4">
                 <Image
                   src={`/images/achievements/quality-management.jpg`}
+                  onClick={() => {
+                    setOpen(true);
+                    setIndex(2);
+                  }}
                   height={498}
                   width={385}
                   alt="Quality Management"
@@ -211,6 +242,10 @@ export default function Aboutus() {
               <motion.div variants={xSlideVariants} className="space-y-4 p-4">
                 <Image
                   src={`/images/achievements/safety-management.jpg`}
+                  onClick={() => {
+                    setOpen(true);
+                    setIndex(1);
+                  }}
                   height={498}
                   width={385}
                   alt="Safety Management"
@@ -221,6 +256,15 @@ export default function Aboutus() {
                 </p>
               </motion.div>
             </motion.div>
+            <Lightbox
+              slides={images}
+              open={open}
+              index={index}
+              close={() => {
+                setOpen(false);
+                setIndex(-1);
+              }}
+            />
           </div>
         </motion.div>
         <PartnerCTA />

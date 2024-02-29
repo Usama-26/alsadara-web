@@ -11,7 +11,7 @@ export default function CustomerCTA({}) {
               today we’re here to help!
             </h1>
             <div>
-              <Link href="partner" className="border-b border-gray-600">
+              <Link href="partner" className="border-b border-gray-200">
                 Reach Out now
               </Link>
             </div>

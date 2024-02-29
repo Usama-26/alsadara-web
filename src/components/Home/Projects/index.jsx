@@ -1,5 +1,7 @@
 import { ItemCard, ProjectCard } from "@/components/Card";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 const projects = [
   {
     name: "Jubail 2020",
@@ -58,20 +60,41 @@ export default function OurProjects() {
             initial={"hidden"}
             variants={containerVariants}
             whileInView={"visible"}
-            className="grid lg:grid-cols-3 grid-cols-1 gap-8"
+            className="grid lg:grid-cols-3 grid-cols-1 gap-4"
           >
-            {projects.map((project, index) => (
-              <motion.div
-                custom={index}
-                initial={"hidden"}
-                whileInView={"visible"}
-                variants={itemVariants}
-                key={index}
-              >
-                <ItemCard item={project} />
-              </motion.div>
-            ))}
+            <motion.div
+              variants={itemVariants}
+              custom={1}
+              className="flex flex-col gap-4"
+            >
+              <img src={"/images/portfolio/portfolio-section-4.png"} />
+              <img src={"/images/portfolio/portfolio-section-1.png"} />
+            </motion.div>
+            <motion.div
+              variants={itemVariants}
+              custom={2}
+              className="flex flex-col gap-4"
+            >
+              <img src={"/images/portfolio/portfolio-section-6.png"} />
+              <img src={"/images/portfolio/portfolio-section-5.png"} />
+            </motion.div>
+            <motion.div
+              variants={itemVariants}
+              custom={3}
+              className="flex flex-col gap-4"
+            >
+              <img src={"/images/portfolio/portfolio-section-3.png"} />
+              <img src={"/images/portfolio/portfolio-section-2.png"} />
+            </motion.div>
           </motion.div>
+          <div className="text-center mt-8">
+            <Link
+              href={"/portfolio"}
+              className="px-8 py-2 rounded-full bg-primary hover:bg-primary-light text-white font-medium"
+            >
+              Explore More
+            </Link>
+          </div>
         </div>
       </div>
     </motion.section>

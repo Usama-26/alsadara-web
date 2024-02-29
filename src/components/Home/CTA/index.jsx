@@ -1,12 +1,16 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useState } from "react";
+import * as Yup from "yup";
+import MyModal from "@/components/Modal";
 
 export default function CTA({}) {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState("");
+  const [show, setShow] = useState(false);
+
   const leftVariants = {
     hidden: { x: -100, y: 100, scale: 0.9, opacity: 0 },
     visible: {
@@ -36,6 +40,12 @@ export default function CTA({}) {
     message: "",
   };
 
+  const closeMessage = () => {
+    setShow(false);
+    setSuccess("");
+    setError("");
+  };
+
   const handleSubmit = async (values) => {
     setError("");
     setSuccess("");
@@ -50,14 +60,14 @@ export default function CTA({}) {
       });
       if (response.ok) {
         const data = await response.json();
-        setSuccess(data.message);
+        setSuccess("Form Submitted Successfully.");
+        setShow(true);
         setIsLoading(false);
-        // console.log("Response:", data.message);
       } else {
         console.error("Failed to submit form. Please Try Again Later.");
       }
     } catch (error) {
-      setError(error.error);
+      setError("Something went wrong. Please Try Again.");
       setIsLoading(false);
       console.error("Error:", error);
     }
@@ -94,50 +104,92 @@ export default function CTA({}) {
             </h1>
             <Formik
               initialValues={initialValues}
+              validationSchema={Yup.object({
+                name: Yup.string().required("Name is required"),
+                email: Yup.string().email().required("Email is required"),
+                phone: Yup.string().required("Phone No. is required"),
+                subject: Yup.string().required("Subject is required"),
+                message: Yup.string().required("Message is required"),
+              })}
               onSubmit={(values) => {
                 handleSubmit(values);
               }}
             >
               {({ isSubmitting }) => (
                 <Form className="lg:px-8 px-4 my-4 space-y-4">
-                  <Field
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Full Name"
-                    className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
-                  />
-                  <Field
-                    type="text"
-                    name="phone"
-                    id="phone"
-                    placeholder="Phone"
-                    className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
-                  />
-                  <Field
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Email Address"
-                    className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
-                  />
-                  <Field
-                    as="select"
-                    name="subject"
-                    id="subject"
-                    className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
-                  >
-                    <option value="select">Subject</option>
-                    {/* Add other options here */}
-                  </Field>
-                  <Field
-                    as="textarea"
-                    name="message"
-                    id="message"
-                    placeholder="Your Message"
-                    rows={10}
-                    className="w-full rounded-2xl px-6 py-3 border border-gray-200 bg-white resize-none"
-                  />
+                  <div>
+                    <Field
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Full Name"
+                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                    />
+                    <ErrorMessage
+                      component={"p"}
+                      name="name"
+                      className="text-sm text-red-600"
+                    />
+                  </div>
+                  <div>
+                    <Field
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      placeholder="Phone"
+                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                    />
+                    <ErrorMessage
+                      component={"p"}
+                      name="phone"
+                      className="text-sm text-red-600"
+                    />
+                  </div>
+                  <div>
+                    <Field
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email Address"
+                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                    />
+                    <ErrorMessage
+                      component={"p"}
+                      name="email"
+                      className="text-sm text-red-600"
+                    />
+                  </div>
+                  <div>
+                    <Field
+                      as="select"
+                      name="subject"
+                      id="subject"
+                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                    >
+                      <option value="select">Subject</option>
+                      {/* Add other options here */}
+                    </Field>
+                    <ErrorMessage
+                      component={"p"}
+                      name="subject"
+                      className="text-sm text-red-600"
+                    />
+                  </div>
+                  <div>
+                    <Field
+                      as="textarea"
+                      name="message"
+                      id="message"
+                      placeholder="Your Message"
+                      rows={10}
+                      className="w-full rounded-2xl px-6 py-3 border border-gray-200 bg-white resize-none"
+                    />
+                    <ErrorMessage
+                      component={"p"}
+                      name="message"
+                      className="text-sm text-red-600"
+                    />
+                  </div>
                   <div className="text-center">
                     <button
                       type="submit"
@@ -153,6 +205,22 @@ export default function CTA({}) {
           </div>
         </motion.div>
       </div>
+      {success && (
+        <MyModal
+          open={show}
+          setOpen={closeMessage}
+          heading={"Success"}
+          message={success}
+        />
+      )}
+      {error && (
+        <MyModal
+          open={show}
+          setOpen={closeMessage}
+          heading={"Oops!"}
+          message={error}
+        />
+      )}
     </section>
   );
 }

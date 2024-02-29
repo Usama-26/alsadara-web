@@ -6,9 +6,9 @@ import PortfolioHero from "@/components/Hero/PortfolioHero";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import CustomerCTA from "@/components/CustomerCTA";
 export default function Portfolio() {
-  const images = Array.from({ length: 13 }, (_, i) => {
+  const images = Array.from({ length: 11 }, (_, i) => {
     return {
-      src: `/images/portfolio/image-${i + 1}.jpg`,
+      src: `/images/portfolio/portfolio-${i + 1}.png`,
       width: 400,
       height: 400,
       alt: `Image ${i + 1}`,
