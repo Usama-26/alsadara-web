@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
@@ -46,7 +45,7 @@ export default function Services({}) {
                     solutions.
                   </p>
                   <div>
-                    <Link
+                    <a
                       href={"/services"}
                       className="group tracking-wider font-bold uppercase inline-flex gap-x-2 items-center"
                     >
@@ -54,7 +53,7 @@ export default function Services({}) {
                       <span className="group-hover:translate-x-2 transition-all">
                         <FaArrowRight />
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -88,7 +87,7 @@ export default function Services({}) {
                     operations...
                   </p>
                   <div>
-                    <Link
+                    <a
                       href={"/services/service/power-system"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
@@ -96,7 +95,7 @@ export default function Services({}) {
                       <span className="group-hover:translate-x-2 transition-all">
                         <FaArrowRight />
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -131,7 +130,7 @@ export default function Services({}) {
                     operations...
                   </p>
                   <div>
-                    <Link
+                    <a
                       href={"/services/service/facility-management"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
@@ -139,7 +138,7 @@ export default function Services({}) {
                       <span className="group-hover:translate-x-2 transition-all">
                         <FaArrowRight />
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -174,7 +173,7 @@ export default function Services({}) {
                     services...
                   </p>
                   <div>
-                    <Link
+                    <a
                       href={"/services/service/operation-maintenance"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
@@ -182,7 +181,7 @@ export default function Services({}) {
                       <span className="group-hover:translate-x-2 transition-all">
                         <FaArrowRight />
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -217,7 +216,7 @@ export default function Services({}) {
                     high-quality services...
                   </p>
                   <div>
-                    <Link
+                    <a
                       href={"/services/service/mep-solutions"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
@@ -225,7 +224,7 @@ export default function Services({}) {
                       <span className="group-hover:translate-x-2 transition-all">
                         <FaArrowRight />
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>
@@ -260,7 +259,7 @@ export default function Services({}) {
                     functionality....
                   </p>
                   <div>
-                    <Link
+                    <a
                       href={"/services/service/electrical-installation"}
                       className="group tracking-wider inline-flex gap-x-2 items-center"
                     >
@@ -268,7 +267,7 @@ export default function Services({}) {
                       <span className="group-hover:translate-x-2 transition-all">
                         <FaArrowRight />
                       </span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </motion.div>

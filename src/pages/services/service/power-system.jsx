@@ -182,7 +182,7 @@ export default function PowerSystem() {
         </section>
         <div className="constrained-padded py-8 space-y-10">
           <div className="">
-            <h3 className="font-display lg:text-2xl text-xl mb-4  max-w-3xl">
+            <h3 className="font-display lg:text-2xl text-xl mb-4">
               Power System
             </h3>
             <p>
@@ -195,7 +195,7 @@ export default function PowerSystem() {
             </p>
           </div>
           <div className="">
-            <h3 className="font-display lg:text-2xl text-xl ">Services</h3>
+            <h3 className="font-display lg:text-2xl text-xl">Services</h3>
           </div>
         </div>
         <div className="constrained-padded">

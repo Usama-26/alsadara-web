@@ -1,4 +1,9 @@
 import { Dialog, Transition } from "@headlessui/react";
+import {
+  CheckBadgeIcon,
+  CheckCircleIcon,
+  XCircleIcon,
+} from "@heroicons/react/20/solid";
 import { Fragment } from "react";
 
 export default function MyModal({ open, setOpen, heading, message }) {
@@ -30,23 +35,26 @@ export default function MyModal({ open, setOpen, heading, message }) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    {heading}
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">{message}</p>
+                  <div className=" mx-auto">
+                    {heading === "success" ? (
+                      <CheckCircleIcon className="mx-auto w-32 fill-primary" />
+                    ) : (
+                      <XCircleIcon className="mx-auto w-32 fill-red-500" />
+                    )}
+                  </div>
+                  <div className="mt-4 text-center">
+                    <p className="lg:text-base text-sm text-gray-700">
+                      {message}
+                    </p>
                   </div>
 
-                  <div className="mt-4">
+                  <div className="mt-4 text-center">
                     <button
                       type="button"
-                      className="inline-flex justify-center rounded-md border border-transparent bg-primary-light px-4 py-2 text-sm font-medium text-white hover:bg-primary-extralight focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-extralight focus-visible:ring-offset-2"
+                      className="text-white rounded-full bg-primary-extralight hover:bg-primary px-8 py-2"
                       onClick={setOpen}
                     >
-                      Got it, thanks!
+                      OK
                     </button>
                   </div>
                 </Dialog.Panel>

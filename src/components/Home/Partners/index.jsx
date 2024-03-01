@@ -10,7 +10,7 @@ const images = [
   "/images/partners/partner-6.png",
   "/images/partners/partner-7.png",
   "/images/partners/partner-8.png",
-  "/images/partners/partner-19.png",
+  "/images/partners/partner-10.png",
   "/images/partners/partner-11.png",
   "/images/partners/partner-12.png",
   "/images/partners/partner-13.png",

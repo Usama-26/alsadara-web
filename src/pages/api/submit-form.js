@@ -43,12 +43,15 @@ export default async function handler(req, res) {
 
     try {
       await sendEmail({ name, email, message, phone, subject });
-      res.status(200).json({ message: "Form submitted successfully." });
+      res.status(200).json({
+        message:
+          "You have successfully submitted your form. We will shortly get back to you through your email.",
+      });
     } catch (error) {
-      console.error("Failed to submit form. Please Try Again Later.");
+      
       res
         .status(500)
-        .json({ error: "Failed to submit form. Please Try Again Later." });
+        .json({ error: "Something went wrong! Please Try Again Later." });
     }
   } else {
     res.setHeader("Allow", ["POST"]);

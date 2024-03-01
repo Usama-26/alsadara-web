@@ -86,7 +86,7 @@ export default function Hero({}) {
         ref={(slider) => {
           sliderRef = slider;
         }}
-        speed={3000}
+        speed={5000}
         arrows={false}
         fade
         autoplaySpeed={5000}
@@ -115,7 +115,7 @@ export default function Hero({}) {
                     </p>
                     <Link
                       className="inline-flex  items-center gap-x-2 px-6 py-2 rounded-full border border-gray-100 hover:bg-gray-100/10 text-gray-100 transition-colors group"
-                      href={"#"}
+                      href={"/contact"}
                     >
                       <span className="lg:text-base text-sm">Contact Us</span>
                       <span className="group-hover:translate-x-3 transition-all">

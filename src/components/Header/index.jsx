@@ -48,13 +48,13 @@ export default function Header({}) {
             exit={"hidden"}
             className="lg:hidden block fixed inset-0 w-full h-full bg-primary overflow-hidden"
           >
-            <motion.div className="h-full flex flex-col justify-center items-center  px-8">
-              <motion.ul className="mt-auto text-2xl space-y-8 mb-40 text-white">
+            <motion.div className="h-full flex flex-col justify-center items-center px-8">
+              <motion.ul className=" text-2xl space-y-8 text-white">
                 {navItems.map((item, index) => (
                   <motion.li key={index} variants={itemVariants}>
                     <Link
                       href={item.link}
-                      className="w-full inline-block text-4xl text-center "
+                      className="w-full inline-block text-3xl text-center "
                     >
                       {item.label}
                     </Link>

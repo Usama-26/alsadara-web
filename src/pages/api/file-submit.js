@@ -19,6 +19,7 @@ const sendEmail = async (files) => {
     const mailOptions = {
       from: "partner@alsadara.com",
       to: "supplychain@alsadaraco.com",
+
       subject: "Files Submission",
       text: "Files received from partner.",
       attachments: files.map((file) => ({
@@ -57,12 +58,14 @@ export default async function handler(req, res) {
       try {
         // Send the email with uploaded files as attachments
         await sendEmail(req.files);
-        res
-          .status(200)
-          .json({ message: "Files uploaded and email sent successfully!" });
+        res.status(200).json({
+          message:
+            "Your files have been submitted successfully  your form. We will shortly get back to you through your email.",
+        });
       } catch (error) {
-        console.error("Failed to send email");
-        res.status(500).json({ error: "Failed to send email" });
+        res
+          .status(500)
+          .json({ error: "Something went wrong! Please try again later." });
       }
     });
   } else {

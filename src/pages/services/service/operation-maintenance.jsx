@@ -180,7 +180,7 @@ export default function OperationsAndMaintenance() {
         </section>
         <div className="constrained-padded py-10 space-y-10">
           <div className="">
-            <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
+          <h3 className="font-display lg:text-2xl text-xl mb-4">
               Operation & Maintenance Solutions
             </h3>
             <p>
@@ -193,7 +193,7 @@ export default function OperationsAndMaintenance() {
             </p>
           </div>
           <div className="">
-            <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
+          <h3 className="font-display lg:text-2xl text-xl ">
               Services
             </h3>
           </div>

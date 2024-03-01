@@ -16,17 +16,17 @@ const services = [
   {
     heading: "Hospitality Solutions",
     details:
-      "Lorem ipsum dolor sit amet consectetur. Felis rhoncus non tempus pulvinar enim justo sed.",
+      "We elevate guest experiences with top-notch hospitality solutions, ensuring satisfaction and memorable stays.",
   },
   {
     heading: "Housekeeping Solutions",
     details:
-      "Lorem ipsum dolor sit amet consectetur. Felis rhoncus non tempus pulvinar enim justo sed.",
+      "We offer tailored Housekeeping Solutions for a spotless, organized, and inviting space. Trust us for a clean, comfortable environment.",
   },
   {
     heading: "Integrated Facility Management Services",
     details:
-      "Lorem ipsum dolor sit amet consectetur. Felis rhoncus non tempus pulvinar enim justo sed.",
+      "We specialize in Integrated Facility Management, handling operations, maintenance, security, and sustainability. Trust us for efficient, cost-effective, and comprehensive facility care.",
   },
 ];
 
@@ -126,7 +126,7 @@ export default function FacilityManagement() {
         </section>
         <div className="constrained-padded py-8 space-y-10">
           <div className="">
-            <h3 className="font-display lg:text-2xl text-xl mb-4  max-w-3xl">
+            <h3 className="font-display lg:text-2xl text-xl mb-4">
               Facility Management
             </h3>
             <p>
@@ -139,7 +139,7 @@ export default function FacilityManagement() {
             </p>
           </div>
           <div className="">
-            <h3 className="font-display lg:text-2xl text-xl ">Services</h3>
+            <h3 className="font-display lg:text-2xl text-xl">Services</h3>
           </div>
         </div>
         <div className="constrained-padded">

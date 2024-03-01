@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Header from "../Header";
 
@@ -13,21 +11,21 @@ export default function PortfolioHero({}) {
           <div className="lg:mt-40 mt-10 text-end">
             <div className="inline-block">
               <div className="flex flex-col gap-y-3">
-                <Link
+                <a
                   href={"https://twitter.com/alsadaraco"}
                   target="_blank"
                   className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                 >
                   <FaXTwitter />
-                </Link>
-                <Link
+                </a>
+                <a
                   href={"https://www.linkedin.com/company/alsadara/"}
                   target="_blank"
                   className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                 >
                   <FaLinkedinIn />
-                </Link>
-                <Link
+                </a>
+                <a
                   href={
                     "https://www.instagram.com/alsadaraco?igsh=MXFzejlqaXMxMHlybA=="
                   }
@@ -35,7 +33,7 @@ export default function PortfolioHero({}) {
                   className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                 >
                   <FaInstagram />
-                </Link>
+                </a>
               </div>
             </div>
           </div>

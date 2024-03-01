@@ -110,16 +110,16 @@ export default function Aboutus() {
           whileInView={"visible"}
           className="constrained-padded p-8 bg-primary/80 "
         >
-          <div className="bg-primary p-4 rounded-2xl">
-            <div className="flex lg:flex-row flex-col text-white text-justify">
-              <div className="lg:basis-1/2 p-4 space-y-4">
+          <div className="bg-primary p-4 rounded-2xl ">
+            <div className="flex lg:flex-row flex-col lg:text-justify text-white">
+              <div className="lg:basis-1/2 p-2 lg:p-4 space-y-4">
                 <motion.h1
                   variants={itemVariants}
                   className="uppercase text-lg font-bold"
                 >
                   Our Mission
                 </motion.h1>
-                <div className="space-y-4 lg:pr-8 pb-8 lg:border-r lg:border-b-0 border-b border-gray-400">
+                <div className="space-y-2 lg:pr-8 pb-8 lg:border-r lg:border-b-0 border-b border-gray-400">
                   <motion.p variants={itemVariants}>
                     To deliver superior and pioneering engineering and energy
                     solutions and project management services, ensuring customer
@@ -131,14 +131,14 @@ export default function Aboutus() {
                   </motion.p>
                 </div>
               </div>
-              <div className="lg:basis-1/2 p-4 space-y-4">
+              <div className="lg:basis-1/2 p-2 lg:p-4 space-y-4">
                 <motion.h1
                   variants={itemVariants}
                   className="uppercase text-lg font-bold"
                 >
                   Our Vision
                 </motion.h1>
-                <div className="space-y-4 border-gray-300">
+                <div className="space-y-2 border-gray-300">
                   <motion.p variants={itemVariants}>
                     Our primary objective is to establish ourselves as the
                     leading service provider in Engineering and Energy.

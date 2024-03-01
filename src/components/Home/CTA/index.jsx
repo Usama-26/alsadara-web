@@ -60,7 +60,9 @@ export default function CTA({}) {
       });
       if (response.ok) {
         const data = await response.json();
-        setSuccess("Form Submitted Successfully.");
+        setSuccess(
+          "You have successfully submitted your form. We will shortly get back to you through your email."
+        );
         setShow(true);
         setIsLoading(false);
       } else {
@@ -159,15 +161,31 @@ export default function CTA({}) {
                       className="text-sm text-red-600"
                     />
                   </div>
-                  <div>
+                  <div className="rounded-full bg-white py-3 px-6 border border-gray-200 bg-whit">
                     <Field
                       as="select"
                       name="subject"
                       id="subject"
-                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                      className="w-full "
                     >
-                      <option value="select">Subject</option>
-                      {/* Add other options here */}
+                      <option value="Power System">Power System</option>
+                      <option value="Electrical Installation">
+                        Electrical Installation
+                      </option>
+                      <option value="Electrical Testing">
+                        Electrical Testing & Commissioning
+                      </option>
+                      <option value="It Solutions">IT Solutions</option>
+                      <option value="Bio Medical Maintenance">
+                        Bio Medical Maintenance
+                      </option>
+                      <option value="Operation & Maintenance">
+                        Operation & Maintenance
+                      </option>
+                      <option value="MEP Solutions">MEP Solutions</option>
+                      <option value="Faculty Management">
+                        Faculty Management
+                      </option>
                     </Field>
                     <ErrorMessage
                       component={"p"}
@@ -193,7 +211,7 @@ export default function CTA({}) {
                   <div className="text-center">
                     <button
                       type="submit"
-                      className="inline-block font-bold rounded-full bg-primary-light text-white p-4 px-8 mx-auto tracking-wider"
+                      className="px-8 py-2 rounded-full hover:bg-primary bg-primary-light text-white font-medium"
                       disabled={isSubmitting}
                     >
                       {isLoading ? "Sending..." : "Send Message"}
@@ -209,7 +227,7 @@ export default function CTA({}) {
         <MyModal
           open={show}
           setOpen={closeMessage}
-          heading={"Success"}
+          heading={"success"}
           message={success}
         />
       )}
@@ -217,7 +235,7 @@ export default function CTA({}) {
         <MyModal
           open={show}
           setOpen={closeMessage}
-          heading={"Oops!"}
+          heading={"error"}
           message={error}
         />
       )}

@@ -135,7 +135,7 @@ export default function ITSolutions() {
         </section>
         <div className="constrained-padded py-8 space-y-10">
           <div className="">
-            <h3 className="font-display lg:text-2xl text-xl mb-4  max-w-3xl">
+            <h3 className="font-display lg:text-2xl text-xl mb-4">
               IT Solutions
             </h3>
             <p>

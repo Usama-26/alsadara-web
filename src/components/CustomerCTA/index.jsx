@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 export default function CustomerCTA({}) {
   return (
@@ -11,9 +10,9 @@ export default function CustomerCTA({}) {
               today we’re here to help!
             </h1>
             <div>
-              <Link href="partner" className="border-b border-gray-200">
-                Reach Out now
-              </Link>
+              <a href="/contact" className="border-b border-gray-200">
+                Reach Out Now
+              </a>
             </div>
           </div>
         </div>

@@ -47,8 +47,9 @@ export default function Partner() {
       });
 
       if (response.ok) {
-        console.log(response);
-        setSuccess("Files Submitted Successfully.");
+        setSuccess(
+          "Your files have been submitted successfully  your form. We will shortly get back to you through your email."
+        );
         setShow(true);
         setIsLoading(false);
       } else {
@@ -183,7 +184,7 @@ export default function Partner() {
           <button
             onClick={submitFiles}
             disabled={files.length === 0}
-            className="px-8 py-2 rounded-full bg-primary hover:bg-primary-light text-white font-medium"
+            className="px-8 py-2 rounded-full hover:bg-primary bg-primary-light text-white font-medium"
           >
             {isLoading ? "Sending..." : success ? "Submitted" : "Submit"}
           </button>
@@ -195,7 +196,7 @@ export default function Partner() {
         <MyModal
           open={show}
           setOpen={closeMessage}
-          heading={"Success"}
+          heading={"success"}
           message={success}
         />
       )}
@@ -203,7 +204,7 @@ export default function Partner() {
         <MyModal
           open={show}
           setOpen={closeMessage}
-          heading={"Oops!"}
+          heading={"error"}
           message={error}
         />
       )}

@@ -1,27 +1,24 @@
-import { ItemCard, ProjectCard } from "@/components/Card";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-const projects = [
-  {
-    name: "Jubail 2020",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "/images/projects/jubail.jpg",
-    href: "/",
-  },
-  {
-    name: "Riyadh 2021",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "/images/projects/mecca.jpg",
-    href: "/",
-  },
-  {
-    name: "Makkah 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    img: "/images/projects/riyadh.jpg",
-    href: "/",
-  },
-];
+// const projects = [
+//   {
+//     name: "Jubail 2020",
+//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//     img: "/images/projects/jubail.jpg",
+//     href: "/",
+//   },
+//   {
+//     name: "Riyadh 2021",
+//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//     img: "/images/projects/mecca.jpg",
+//     href: "/",
+//   },
+//   {
+//     name: "Makkah 2023",
+//     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non leo quis purus semper cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+//     img: "/images/projects/riyadh.jpg",
+//     href: "/",
+//   },
+// ];
 
 export default function OurProjects() {
   const containerVariants = {
@@ -88,12 +85,12 @@ export default function OurProjects() {
             </motion.div>
           </motion.div>
           <div className="text-center mt-8">
-            <Link
+            <a
               href={"/portfolio"}
-              className="px-8 py-2 rounded-full bg-primary hover:bg-primary-light text-white font-medium"
+              className="px-8 py-2 rounded-full hover:bg-primary bg-primary-light text-white font-medium"
             >
               Explore More
-            </Link>
+            </a>
           </div>
         </div>
       </div>

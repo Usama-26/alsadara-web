@@ -50,7 +50,7 @@ const services = [
   },
   {
     name: "IT Solutions",
-    desc: "We're a leading company specializing in medical device maintenance. With skilled technicians, we offer comprehensive solutions for optimal performance",
+    desc: "alsadara, a top IT solutions provider, empowers businesses with innovative digital solutions, helping organizations thrive in the digital age.",
     href: "/services/service/it-solutions",
     img: "/images/services/it-solutions.jpg",
   },
@@ -113,7 +113,7 @@ export default function Services() {
               <motion.div
                 variants={itemVariants}
                 key={index}
-                className="lg:basis-1/3 basis-full p-4 h-full"
+                className="lg:basis-1/3 basis-full p-4"
               >
                 <ItemCard item={service} />
               </motion.div>

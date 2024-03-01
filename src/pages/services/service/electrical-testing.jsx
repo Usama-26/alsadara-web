@@ -227,7 +227,7 @@ export default function ElectricalInstallation() {
         </section>
         <div className="constrained-padded py-10 space-y-10">
           <div className="">
-            <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
+            <h3 className="font-display lg:text-2xl text-xl">
               Electrical Testing and Commissioning
             </h3>
             <p>
@@ -240,9 +240,7 @@ export default function ElectricalInstallation() {
             </p>
           </div>
           <div className="">
-            <h3 className="font-display lg:text-2xl text-sm max-w-3xl">
-              Services
-            </h3>
+            <h3 className="font-display lg:text-2xl text-xl">Services</h3>
           </div>
         </div>
         <div className="constrained-padded">

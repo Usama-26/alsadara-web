@@ -24,6 +24,7 @@ export default function Portfolio() {
         className="bg-white w-screen h-screen"
       >
         <PortfolioHero />
+
         <GalleryGrid images={images} />
         <CustomerCTA />
         <Footer />

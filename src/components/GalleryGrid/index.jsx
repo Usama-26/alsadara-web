@@ -7,8 +7,11 @@ export function GalleryGrid({ images }) {
 
   const handleClick = (index) => setIndex(index);
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto lg:py-24 py-14 overflow-hidden">
-      <div className="mt-14">
+    <div className="container 2xl:max-w-screen-2xl mx-auto my-10 overflow-hidden">
+      <div className="mt-4">
+        <h3 className="font-display lg:text-2xl text-xl mb-4">
+          Portfolio Gallery
+        </h3>
         <Gallery
           images={images}
           margin={4}

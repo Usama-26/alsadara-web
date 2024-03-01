@@ -105,7 +105,7 @@
   }
   .bio-medical-maintenance-hero-bg {
     background: url("/images/services/bio-medical-maintenance-hero.jpg");
-    @apply bg-no-repeat bg-top bg-cover bg-fixed;
+    @apply bg-no-repeat bg-right bg-cover bg-fixed;
   }
   .electrical-testing-hero-bg {
     background: url("/images/services/electrical-testing-hero.jpg");
@@ -113,10 +113,10 @@
   }
   .operation-maintenance-hero-bg {
     background: url("/images/services/operation-maintenance-hero.jpg");
-    @apply bg-no-repeat bg-top bg-cover bg-fixed;
+    @apply bg-no-repeat bg-left bg-cover bg-fixed;
   }
   .mep-solutions-hero-bg {
-    background: url("/images/services/mep-solutions.jpg");
+    background: url("/images/services/mep-solutions-hero.jpg");
     @apply bg-no-repeat bg-top bg-cover bg-fixed;
   }
 

@@ -120,7 +120,7 @@ export default function AboutUs({}) {
             {pathname.includes("aboutus") ? null : (
               <Link
                 href={"aboutus"}
-                className="rounded-full px-6 py-2 text-white bg-primary-light lg:text-base text-sm font-medium"
+                className="rounded-full px-6 py-2 text-white hover:bg-primary bg-primary-light lg:text-base text-sm font-medium"
               >
                 Read More
               </Link>

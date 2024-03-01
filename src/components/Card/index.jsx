@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { motion } from "framer-motion";
@@ -19,8 +18,8 @@ export function ItemCard({ item }) {
         <h1 className=" font-display text-xl text-primary font-semibold">
           {item.name}
         </h1>
-        <p className="line-clamp-2 text-gray-500">{item.desc}</p>
-        <Link
+        <p className="line-clamp-3 text-gray-500">{item.desc}</p>
+        <a
           href={item.href}
           className="group text-primary tracking-wider inline-flex gap-x-2 items-center font-bold"
         >
@@ -28,7 +27,7 @@ export function ItemCard({ item }) {
           <span className="group-hover:translate-x-2 transition-all">
             <FaArrowRight />
           </span>
-        </Link>
+        </a>
       </div>
     </motion.div>
   );

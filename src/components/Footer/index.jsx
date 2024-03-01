@@ -61,7 +61,7 @@ export default function Footer({ padding }) {
         <div className="flex md:flex-row flex-col gap-6">
           <motion.div variants={list} className="basis-1/5 pr-4">
             <motion.div variants={itemVariants}>
-              <Link href={"/"}>
+              <a href={"/"}>
                 <Image
                   src={"/alsadarah-logo.png"}
                   width="486"
@@ -69,7 +69,7 @@ export default function Footer({ padding }) {
                   alt="Kafu Discounts Logo"
                   className="w-40"
                 />
-              </Link>
+              </a>
             </motion.div>
             <motion.p variants={itemVariants} className="my-4">
               Alsadara, where commitment meets excellence. Our unwavering
@@ -84,27 +84,27 @@ export default function Footer({ padding }) {
               variants={itemVariants}
               className="flex items-center gap-x-4 text-base"
             >
-              <Link target="_blank" href={"https://twitter.com/alsadaraco"}>
+              <a target="_blank" href={"https://twitter.com/alsadaraco"}>
                 <FaXTwitter className="w-6 h-6 fill-white" />
-              </Link>
-              <Link
+              </a>
+              <a
                 target="_blank"
                 href="https://www.facebook.com/hashtag/alsadara/"
               >
                 <FaFacebook className="w-6 h-6 fill-white" />
-              </Link>
-              <Link
+              </a>
+              <a
                 target="_blank"
                 href="https://www.instagram.com/alsadaraco?igsh=MXFzejlqaXMxMHlybA=="
               >
                 <FaInstagram className="w-6 h-6 fill-white" />
-              </Link>
-              <Link
+              </a>
+              <a
                 target="_blank"
                 href="https://www.linkedin.com/company/alsadara/"
               >
                 <FaLinkedinIn className="w-6 h-6 fill-white" />
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
           <div className="basis-3/5">
@@ -123,12 +123,12 @@ export default function Footer({ padding }) {
                 >
                   {navItems.map((item, index) => (
                     <motion.li key={index} variants={itemVariants}>
-                      <Link
+                      <a
                         href={item.link}
                         className=" block hover:underline underline-offset-2"
                       >
                         {item.label}
-                      </Link>
+                      </a>
                     </motion.li>
                   ))}
                 </motion.ul>
@@ -146,45 +146,45 @@ export default function Footer({ padding }) {
                   className="mt-4 space-y-2"
                 >
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/power-system"}
                       className=" block hover:underline underline-offset-2"
                     >
                       Power System
-                    </Link>
+                    </a>
                   </motion.li>
 
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/mep-solutions"}
                       className=" block hover:underline underline-offset-2"
                     >
                       MEP Solutions
-                    </Link>
+                    </a>
                   </motion.li>
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/electrical-installation"}
                       className=" block hover:underline underline-offset-2"
                     >
                       Electrical Installation
-                    </Link>
+                    </a>
                   </motion.li>
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/facility-management"}
                       className=" block hover:underline underline-offset-2"
                     >
                       Facility Management
-                    </Link>
+                    </a>
                   </motion.li>
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/electrical-testing"}
                       className=" block hover:underline underline-offset-2"
                     >
                       Electrical Testing & Commissioning
-                    </Link>
+                    </a>
                   </motion.li>
                 </motion.ul>
               </div>
@@ -201,29 +201,29 @@ export default function Footer({ padding }) {
                   className="mt-4 space-y-2"
                 >
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/operation-maintenance"}
                       className=" block hover:underline underline-offset-2"
                     >
                       Operation & Maintenance Solution
-                    </Link>
+                    </a>
                   </motion.li>
 
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/bio-medical-maintenance"}
                       className=" block hover:underline underline-offset-2"
                     >
                       Bio Medical Maintenance
-                    </Link>
+                    </a>
                   </motion.li>
                   <motion.li variants={itemVariants}>
-                    <Link
-                      href={"/"}
+                    <a
+                      href={"/services/service/it-solutions"}
                       className=" block hover:underline underline-offset-2"
                     >
                       IT Solutions
-                    </Link>
+                    </a>
                   </motion.li>
                 </motion.ul>
               </div>
@@ -241,31 +241,31 @@ export default function Footer({ padding }) {
               className="mt-4 space-y-2"
             >
               <motion.li variants={itemVariants}>
-                <Link
-                  href={"#"}
+                <a
+                  href={"mailto:info@alsadara.com"}
                   className="inline-flex gap-x-2 items-center hover:underline underline-offset-2"
                 >
                   <FaEnvelope className="w-5 h-5" />
                   <span>info@alsadara.com</span>
-                </Link>
+                </a>
               </motion.li>
               <motion.li variants={itemVariants}>
-                <Link
-                  href={"#"}
+                <a
+                  href={"phone:+93456578945"}
                   className="inline-flex gap-x-2 items-center hover:underline underline-offset-2"
                 >
                   <FaPhone className="w-5 h-5" />
                   <span>+93456578945</span>
-                </Link>
+                </a>
               </motion.li>
               <motion.li variants={itemVariants}>
-                <Link
+                <a
                   href={"#"}
                   className="inline-flex gap-x-2 items-center hover:underline underline-offset-2"
                 >
                   <FaLocationDot className="w-5 h-5" />
                   <span>Riyadh, Saudia Arabia</span>
-                </Link>
+                </a>
               </motion.li>
             </motion.ul>
           </div>
