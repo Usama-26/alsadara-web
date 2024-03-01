@@ -217,8 +217,8 @@ export default function ElectricalInstallation() {
                     Electrical Testing and Commissioning
                   </h1>
                   <p className="lg:text-base text-sm max-w-md mx-auto">
-                    Shaping the future of global energy systems with a decade of
-                    power system expertise.
+                    alsadara precision in power system testing for optimal
+                    performance.
                   </p>
                 </div>
               </div>

@@ -115,7 +115,7 @@ export default function FacilityManagement() {
                     Facility Management
                   </h1>
                   <p className="lg:text-base text-sm max-w-md mx-auto">
-                    Alsadara, Delivering excellence in Asset Management with
+                    alsadara, Delivering excellence in Asset Management with
                     ethical operations and tailored solutions for unparalleled
                     client satisfaction.
                   </p>
@@ -130,7 +130,7 @@ export default function FacilityManagement() {
               Facility Management
             </h3>
             <p>
-              Alsadara is dedicated to exceptional services, project success,
+              alsadara is dedicated to exceptional services, project success,
               client satisfaction, and value for money. Specializing in Asset
               Management, we operate ethically with unwavering principles. From
               strategic development to operational management, we customize

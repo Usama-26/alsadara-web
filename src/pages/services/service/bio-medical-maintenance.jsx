@@ -130,8 +130,8 @@ export default function ITSolutions() {
                     Bio Medical Maintenance
                   </h1>
                   <p className="lg:text-base text-sm max-w-md mx-auto">
-                    Shaping the future of global energy systems with a decade of
-                    power system expertise.
+                    Excellence in medical device maintenance, trusted for
+                    performance and reliability.
                   </p>
                 </div>
               </div>
@@ -140,16 +140,14 @@ export default function ITSolutions() {
         </section>
         <div className="constrained-padded py-8 space-y-10">
           <div className="">
-            <h3 className="font-display lg:text-2xl text-xl mb-4  max-w-3xl">
+            <h3 className="font-display lg:text-2xl text-xl mb-4">
               Bio Medical Maintenance
             </h3>
             <p>
-              With a decade of experience in power system studies and
-              operations, alsadara specializes in technical network codes,
-              advanced software simulations, and tailored solutions for a
-              diverse client base. Our expertise has contributed to power system
-              advancements globally, positioning us as the go-to partner for
-              shaping future energy systems.
+              We&apos;re a leading company specializing in medical device
+              maintenance. With skilled technicians, we offer comprehensive
+              solutions for optimal performance and reliability. Our commitment
+              to excellence has made us a trusted healthcare industry partner.
             </p>
           </div>
           <div className="">

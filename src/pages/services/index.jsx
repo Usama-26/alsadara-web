@@ -26,7 +26,7 @@ const services = [
   },
   {
     name: "Operation And Maintenance Solution",
-    desc: "Alsadara's dedicated team provides advanced maintenance services for electrical equipment using a data-driven",
+    desc: "alsadara's dedicated team provides advanced maintenance services for electrical equipment using a data-driven",
     href: "/services/service/operation-maintenance",
     img: "/images/services/operation-maintenance.jpg",
   },
@@ -97,7 +97,7 @@ export default function Services() {
         <ServicesHero />
         <div className="constrained-padded flex">
           <div className="py-8 px-4">
-            <h3 className="font-display lg:text-2xl text-lg max-w-3xl">
+            <h3 className="font-display lg:text-2xl text-xl mb-4">
               Services alsadara offers
             </h3>
           </div>

@@ -170,10 +170,9 @@ export default function PowerSystem() {
                   <h1 className="font-display font-bold lg:text-5xl text-3xl ">
                     Power System
                   </h1>
-                  <p className="lg:text-base text-sm">
-                    Shaping the future of global energy systems with a{" "}
-                    <br className="hidden lg:block" /> decade of power system
-                    expertise.
+                  <p className="lg:text-base text-sm max-w-md">
+                    Shaping the future of global energy systems with a decade of
+                    power system expertise.
                   </p>
                 </div>
               </div>

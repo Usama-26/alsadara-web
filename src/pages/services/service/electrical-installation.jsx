@@ -134,9 +134,8 @@ export default function ElectricalInstallation() {
                     Electrical Installation
                   </h1>
                   <p className="lg:text-base text-sm max-w-md mx-auto">
-                    Shaping the future of global energy systems with a{" "}
-                    <br className="hidden lg:block" /> decade of power system
-                    expertise.
+                    alsadara prioritizing safety and efficiency in
+                    industry-leading electrical installations.
                   </p>
                 </div>
               </div>

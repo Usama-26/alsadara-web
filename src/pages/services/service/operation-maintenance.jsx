@@ -184,7 +184,7 @@ export default function OperationsAndMaintenance() {
               Operation & Maintenance Solutions
             </h3>
             <p>
-              Alsadara&apos;s dedicated team provides advanced maintenance
+              alsadara&apos;s dedicated team provides advanced maintenance
               services for electrical equipment using a data-driven,
               conditioned-based approach. Tailoring upkeep to actual equipment
               conditions maximizes reliability and efficiency, minimizing
