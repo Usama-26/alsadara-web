@@ -7,7 +7,7 @@ export function GalleryGrid({ images }) {
 
   const handleClick = (index) => setIndex(index);
   return (
-    <div className="container 2xl:max-w-screen-2xl mx-auto my-10 overflow-hidden">
+    <div className="constrained-padded mx-auto my-10 overflow-hidden">
       <div className="mt-4">
         <h3 className="font-display lg:text-2xl text-xl mb-4">
           Portfolio Gallery

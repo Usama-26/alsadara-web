@@ -48,7 +48,7 @@ export default function Partner() {
 
       if (response.ok) {
         setSuccess(
-          "Your files have been submitted successfully  your form. We will shortly get back to you through your email."
+          "Your files have been submitted successfully. We will shortly get back to you through your email."
         );
         setShow(true);
         setIsLoading(false);

@@ -166,7 +166,7 @@ export default function CTA({}) {
                       as="select"
                       name="subject"
                       id="subject"
-                      className="w-full "
+                      className="w-full bg-white"
                     >
                       <option value="Power System">Power System</option>
                       <option value="Electrical Installation">

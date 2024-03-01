@@ -31,7 +31,7 @@ export default function Home() {
         >
           <div className="constrained-padded">
             <div className="space-y-2 mb-10">
-              <h1 className="font-display lg:text-3xl text-xl text-center capitalize">
+              <h1 className="font-display lg:text-3xl text-2xl text-center capitalize">
                 Geographical Location
               </h1>
             </div>
