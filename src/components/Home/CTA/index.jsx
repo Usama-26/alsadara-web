@@ -76,7 +76,7 @@ export default function CTA({}) {
   };
 
   return (
-    <section className="my-10 lg:translate-y-40 translate-y-20">
+    <section className="lg:my-10 lg:translate-y-40 translate-y-20">
       <div className="constrained-padded flex ">
         <motion.div
           initial={"hidden"}
@@ -101,7 +101,7 @@ export default function CTA({}) {
           className="lg:basis-1/2 basis-full bg-gray-100 lg:rounded-r-3xl lg:rounded-none rounded-3xl shadow-lg"
         >
           <div className="py-6">
-            <h1 className="font-display text-3xl text-center capitalize">
+            <h1 className="font-display lg:text-3xl text-2xl text-center capitalize">
               Get in Touch
             </h1>
             <Formik

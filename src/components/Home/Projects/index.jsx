@@ -43,7 +43,7 @@ export default function OurProjects() {
     >
       <div className="constrained-padded">
         <div className="space-y-2">
-          <h1 className="font-display lg:text-3xl text-xl text-center capitalize">
+          <h1 className="font-display lg:text-3xl text-2xl text-center capitalize">
             Our Portfolio
           </h1>
           <p className="text-center max-w-2xl  mx-auto text-sm lg:text-base">

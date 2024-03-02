@@ -34,7 +34,7 @@ export default function WhyChooseUs({}) {
         whileInView={"visible"}
         className="constrained-padded py-20"
       >
-        <h1 className="font-display text-3xl text-center">
+        <h1 className="font-display lg:text-3xl text-2xl text-center">
           Why Choose Alsadara
         </h1>
         <div className="pt-20">
