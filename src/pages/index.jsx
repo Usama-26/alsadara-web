@@ -27,7 +27,7 @@ export default function Home() {
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1, transition: { duration: 1 } }}
           viewport={{ margin: "50px" }}
-          className="py-20"
+          className="lg:py-20"
         >
           <div className="constrained-padded">
             <div className="space-y-2 mb-10">
