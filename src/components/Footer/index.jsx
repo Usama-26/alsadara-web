@@ -10,6 +10,7 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import BackToTop from "../BackToTop";
 
 const navItems = [
   { label: "Home", link: "/" },
@@ -58,7 +59,7 @@ export default function Footer({ padding }) {
         viewport={{ margin: "50px" }}
         className="py-10 container mx-auto text-sm px-6 lg:px-8"
       >
-        <div className="flex md:flex-row flex-col gap-6">
+        <div className="relative flex md:flex-row flex-col gap-6">
           <motion.div variants={list} className="basis-1/5 pr-4">
             <motion.div variants={itemVariants}>
               <a href={"/"}>
@@ -269,6 +270,7 @@ export default function Footer({ padding }) {
               </motion.li>
             </motion.ul>
           </div>
+          <BackToTop />
         </div>
       </motion.div>
       <motion.div

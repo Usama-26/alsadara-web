@@ -27,11 +27,11 @@ export default function BackToTop({}) {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-10 right-10 p-4 rounded-full bg-primary-light hover:bg-primary  transition duration-300 shadow z-50 ${
+      className={`absolute top-0 right-5 p-2 rounded-full bg-white hover:bg-transparent border border-white  text-primary hover:text-white  transition duration-300 shadow z-50 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <BsArrowUp className="lg:w-8 lg:h-8 w-6 h-6 text-white" />
+      <BsArrowUp className="lg:w-6 lg:h-6 w-4 h-4" />
     </button>
   );
 }
