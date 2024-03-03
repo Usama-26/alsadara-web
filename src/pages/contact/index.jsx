@@ -10,7 +10,7 @@ export default function Contactus() {
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
         exit={{ opacity: 0 }}
-        className="bg-white w-screen h-screen"
+        className="bg-white"
       >
         <ContactusHero />
 

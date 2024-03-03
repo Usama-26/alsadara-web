@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../Navbar";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -52,12 +51,12 @@ export default function Header({}) {
               <motion.ul className=" text-2xl space-y-8 text-white">
                 {navItems.map((item, index) => (
                   <motion.li key={index} variants={itemVariants}>
-                    <Link
+                    <a
                       href={item.link}
                       className="w-full inline-block text-3xl text-center "
                     >
                       {item.label}
-                    </Link>
+                    </a>
                   </motion.li>
                 ))}
                 <motion.li variants={itemVariants}>
@@ -108,7 +107,7 @@ export default function Header({}) {
         whileInView={"visible"}
         className=""
       >
-        <Link href={"/"} className="relative z-20">
+        <a href={"/"} className="relative z-20">
           <Image
             src={"/alsadarah-logo.png"}
             width={426}
@@ -116,7 +115,7 @@ export default function Header({}) {
             alt="Alsadarah Logo"
             className="w-32"
           />
-        </Link>
+        </a>
       </motion.div>
       <motion.div
         initial={"hidden"}

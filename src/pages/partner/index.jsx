@@ -69,7 +69,7 @@ export default function Partner() {
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
         exit={{ opacity: 0 }}
-        className="bg-white w-screen h-screen"
+        className="bg-white"
       >
         <PartnerHero />
         <div className="constrained-padded flex">
