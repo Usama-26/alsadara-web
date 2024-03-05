@@ -30,7 +30,7 @@ export default function OurPartners() {
       initial={"hidden"}
       variants={containerVariants}
       whileInView={"visible"}
-      className="lg:my-20 mt-20"
+      className=" mt-20"
     >
       <div className="constrained-padded overflow-x-hidden">
         <h1 className="font-display lg:text-3xl text-2xl text-center capitalize">
@@ -49,7 +49,7 @@ export default function OurPartners() {
                     width={300}
                     height={300}
                     alt={image}
-                    className="w-32 mx-auto"
+                    className="lg:w-40 w-32 mx-auto"
                   />
                 </div>
               </div>

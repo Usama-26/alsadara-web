@@ -22,7 +22,7 @@
     width: 100%;
     height: 100%; /* Adjust this according to your design */
     outline: 1px solid #aaa;
-    outline-offset: 4px;
+    outline-offset: 5px;
     border-radius: 4rem; /* Adjust the radius as needed */
     transition: all 0.3s ease; /* Smooth transition for width changes */
   }
@@ -122,5 +122,12 @@
 
   ul.slick-dots li.slick-active span.active-dot {
     @apply bg-primary w-6 border-transparent;
+  }
+
+  .slick-slider .slick-next::before {
+    content: none !important;
+  }
+  .slick-slider .slick-prev::before {
+    content: none !important;
   }
 }

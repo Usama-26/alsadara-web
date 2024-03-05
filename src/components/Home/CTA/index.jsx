@@ -125,7 +125,7 @@ export default function CTA({}) {
                       name="name"
                       id="name"
                       placeholder="Full Name"
-                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                      className="w-full rounded-full py-3 px-6 outline-primary-light  border border-gray-200 bg-white"
                     />
                     <ErrorMessage
                       component={"p"}
@@ -139,7 +139,7 @@ export default function CTA({}) {
                       name="phone"
                       id="phone"
                       placeholder="Phone"
-                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                      className="w-full rounded-full py-3 px-6 outline-primary-light  border border-gray-200 bg-white"
                     />
                     <ErrorMessage
                       component={"p"}
@@ -153,7 +153,7 @@ export default function CTA({}) {
                       name="email"
                       id="email"
                       placeholder="Email Address"
-                      className="w-full rounded-full py-3 px-6 border border-gray-200 bg-white"
+                      className="w-full rounded-full py-3 px-6 outline-primary-light  border border-gray-200 bg-white"
                     />
                     <ErrorMessage
                       component={"p"}
@@ -161,12 +161,12 @@ export default function CTA({}) {
                       className="text-sm text-red-600"
                     />
                   </div>
-                  <div className="rounded-full bg-white py-3 px-6 border border-gray-200 bg-whit">
+                  <div className="rounded-full bg-white py-3 px-6 border border-gray-200">
                     <Field
                       as="select"
                       name="subject"
                       id="subject"
-                      className="w-full bg-white"
+                      className="w-full bg-white outline-none"
                     >
                       <option value="Select">Select</option>
                       <option value="Power System">Power System</option>
@@ -201,7 +201,7 @@ export default function CTA({}) {
                       id="message"
                       placeholder="Your Message"
                       rows={10}
-                      className="w-full rounded-2xl px-6 py-3 border border-gray-200 bg-white resize-none"
+                      className="w-full rounded-2xl px-6 py-3 outline-primary-light border border-gray-200 bg-white resize-none"
                     />
                     <ErrorMessage
                       component={"p"}

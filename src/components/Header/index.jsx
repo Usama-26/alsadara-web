@@ -113,7 +113,7 @@ export default function Header({}) {
             width={426}
             height={162}
             alt="Alsadarah Logo"
-            className="w-32"
+            className="w-36"
           />
         </a>
       </motion.div>

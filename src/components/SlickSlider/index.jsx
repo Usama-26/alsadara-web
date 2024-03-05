@@ -1,4 +1,10 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
+import {
+  ChevronDoubleLeftIcon,
+  ChevronDoubleRightIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from "@heroicons/react/24/outline";
 import Slider from "react-slick";
 
 export default function SlickSlider({ visibleSlides = 3, children }) {
@@ -12,9 +18,10 @@ export default function SlickSlider({ visibleSlides = 3, children }) {
       autoplay={true}
       autoplaySpeed={5000}
       infinite={true}
-      arrows={isMobileScreen ? true : false}
-      dots={true}
+      swipeToSlide
       centerPadding="0"
+      prevArrow={<SamplePrevArrow />}
+      nextArrow={<SampleNextArrow />}
       responsive={[
         { breakpoint: 1024, settings: { slidesToShow: 2 } },
         { breakpoint: 640, settings: { slidesToShow: 1 } },
@@ -28,5 +35,29 @@ export default function SlickSlider({ visibleSlides = 3, children }) {
     >
       {children}
     </Slider>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <span
+      className={`${className} !-translate-y-8 opacity-80 hover:opacity-100`}
+      onClick={onClick}
+    >
+      <ChevronLeftIcon className="w-8 h-8 stroke-primary-light stroke-2" />
+    </span>
+  );
+}
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <span
+      className={`${className} !-translate-y-8 opacity-80 hover:opacity-100`}
+      onClick={onClick}
+    >
+      <ChevronRightIcon className="w-8 h-8 stroke-primary-light stroke-2" />
+    </span>
   );
 }
