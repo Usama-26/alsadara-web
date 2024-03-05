@@ -39,7 +39,7 @@ export default function OurPartners() {
         <p className="text-center max-w-2xl lg:py-4 pt-2 mx-auto">
           Join with our partners
         </p>
-        <div className="my-10">
+        <div className="my-10 lg:px-0 px-10">
           <SlickSlider visibleSlides={5}>
             {images.map((image, index) => (
               <div key={index} className="">
