@@ -1,24 +1,11 @@
 import SlickSlider from "@/components/SlickSlider";
 import Image from "next/image";
-
-const images = [
-  "/images/partners/partner-1.png",
-  "/images/partners/partner-2.png",
-  "/images/partners/partner-3.png",
-  "/images/partners/partner-4.png",
-  "/images/partners/partner-5.png",
-  "/images/partners/partner-6.png",
-  "/images/partners/partner-7.png",
-  "/images/partners/partner-8.png",
-  "/images/partners/partner-10.png",
-  "/images/partners/partner-11.png",
-  "/images/partners/partner-12.png",
-  "/images/partners/partner-13.png",
-  "/images/partners/partner-14.png",
-  "/images/partners/partner-15.png",
-];
-
 import { motion } from "framer-motion";
+
+const images = Array.from(
+  { length: 39 },
+  (_, i) => `/images/partners/partner-${i + 1}.png`
+);
 
 export default function OurPartners() {
   const containerVariants = {

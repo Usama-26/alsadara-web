@@ -70,6 +70,7 @@ export default function Contactus() {
               <h1 className="lg:text-3xl text-2xl font-display text-primary-light">
                 alsadara
               </h1>
+
               <p className="text-justify">
                 Scruboo stands out as a market benchmark, reshaping car wash
                 standards by prioritizing customer satisfaction. Our
@@ -79,6 +80,9 @@ export default function Contactus() {
                 ensuring every client receives an exceptional experience. Join
                 us in this revolution—partner with Scruboo and explore franchise
                 opportunities to redefine the business of clean.
+              </p>
+              <p className="font-medium mt-4">
+                Contact us today - we’re here to assist you!
               </p>
               <div className="flex flex-wrap gap-y-5 my-5">
                 <div className="basis-1/2">

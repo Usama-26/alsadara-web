@@ -3,14 +3,19 @@ import Image from "next/image";
 import Navbar from "../Navbar";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { AnimatePresence } from "framer-motion";
 
 const navItems = [
   { label: "Home", link: "/" },
   { label: "About Us", link: "/aboutus" },
   { label: "Services", link: "/services" },
-  { label: "Partners", link: "/partner" },
+  { label: "Vendors", link: "/vendor" },
   { label: "Contact Us", link: "/contact" },
 ];
 

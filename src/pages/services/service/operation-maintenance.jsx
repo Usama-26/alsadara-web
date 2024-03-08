@@ -1,6 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Footer from "@/components/Footer";
-import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 import Header from "@/components/Header";
 import CustomerCTA from "@/components/CustomerCTA";
 import { useState } from "react";
@@ -155,6 +160,13 @@ export default function OperationsAndMaintenance() {
                   >
                     <FaInstagram />
                   </Link>
+                  <Link
+                    href={"https://www.facebook.com/hashtag/alsadara/"}
+                    target="_blank"
+                    className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
+                  >
+                    <FaFacebook />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -180,7 +192,7 @@ export default function OperationsAndMaintenance() {
         </section>
         <div className="constrained-padded py-10 space-y-10">
           <div className="">
-          <h3 className="font-display lg:text-2xl text-xl mb-4">
+            <h3 className="font-display lg:text-2xl text-xl mb-4">
               Operation & Maintenance Solutions
             </h3>
             <p>
@@ -193,9 +205,7 @@ export default function OperationsAndMaintenance() {
             </p>
           </div>
           <div className="">
-          <h3 className="font-display lg:text-2xl text-xl ">
-              Services
-            </h3>
+            <h3 className="font-display lg:text-2xl text-xl ">Services</h3>
           </div>
         </div>
         <div className="constrained-padded">

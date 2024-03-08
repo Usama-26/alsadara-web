@@ -3,7 +3,12 @@ import Footer from "@/components/Footer";
 import ServicesHero from "@/components/Hero/ServicesHero";
 import { ItemCard } from "@/components/Card";
 import PartnerCTA from "@/components/PartnerCTA";
-import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
@@ -109,6 +114,13 @@ export default function ITSolutions() {
                     className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                   >
                     <FaInstagram />
+                  </Link>
+                  <Link
+                    href={"https://www.facebook.com/hashtag/alsadara/"}
+                    target="_blank"
+                    className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
+                  >
+                    <FaFacebook />
                   </Link>
                 </div>
               </div>

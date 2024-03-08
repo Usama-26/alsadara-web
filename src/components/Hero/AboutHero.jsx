@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 import Header from "../Header";
 
@@ -38,9 +43,7 @@ export default function AboutHero({}) {
                   <FaInstagram />
                 </Link>
                 <Link
-                  href={
-                    "https://www.facebook.com/hashtag/alsadara/"
-                  }
+                  href={"https://www.facebook.com/hashtag/alsadara/"}
                   target="_blank"
                   className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                 >
@@ -56,7 +59,7 @@ export default function AboutHero({}) {
         <div className=" relative about-hero-bg">
           <div className="relative constrained-padded">
             <div className="py-60 lg:h-screen flex justify-center items-center">
-              <div className="text-white space-y-6 text-center">
+              <div className="pt-8 text-white space-y-6 text-center">
                 <h1 className="font-display font-bold lg:text-5xl text-3xl ">
                   About us
                 </h1>
