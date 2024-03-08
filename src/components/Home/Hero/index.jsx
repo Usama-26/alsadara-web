@@ -5,6 +5,7 @@ import { useRef } from "react";
 import {
   FaArrowLeft,
   FaArrowRight,
+  FaFacebook,
   FaInstagram,
   FaLinkedinIn,
   FaXTwitter,
@@ -16,7 +17,7 @@ import Header from "@/components/Header";
 const images = [
   "/images/home/carousel/hero-1.jpg",
   "/images/home/carousel/hero-2.jpg",
-  "/images/home/carousel/hero-3.jpg",
+  "/images/home/carousel/hero-4.jpg",
 ];
 
 export default function Hero({}) {
@@ -76,6 +77,15 @@ export default function Hero({}) {
                 >
                   <FaInstagram />
                 </Link>
+                <Link
+                  href={
+                    "https://www.facebook.com/hashtag/alsadara/"
+                  }
+                  target="_blank"
+                  className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
+                >
+                  <FaFacebook />
+                </Link>
               </div>
             </div>
           </div>
@@ -105,13 +115,14 @@ export default function Hero({}) {
                 <div className="flex justify-between py-48">
                   <div className="text-white space-y-6 mt-5">
                     <h1 className="font-display font-bold  lg:text-5xl text-3xl ">
-                      <b className="text-primary">alsadara</b> power <br />
-                      solutions
+                      <b className="text-primary">alsadara</b>  <br />
+                      on time done right
                     </h1>
                     <p className="pr-10">
-                      We deliver top-notch expertise in every project, meeting
-                      minimum <br className="hidden lg:block" />
-                      standards as fundamental client commitments.
+                      We deliver top-notch expertise in every project, adhering 
+                      to the highest <br className="hidden lg:block" />
+                      industry standards as our fundamental 
+                      commitment to our clients.
                     </p>
                     <Link
                       className="inline-flex  items-center gap-x-2 px-6 py-2 rounded-full border border-gray-100 hover:bg-gray-100/10 text-gray-100 transition-colors group"

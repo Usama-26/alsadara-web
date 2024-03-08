@@ -13,15 +13,28 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const sendEmail = async (files) => {
+const sendEmail = async (files, body) => {
   try {
-    // Construct the email message
-    const mailOptions = {
-      from: "partner@alsadara.com",
-      to: "supplychain@alsadaraco.com",
+    // Extract relevant fields from req.body for email content
+    const { companyName, address, country, city, zipcode, webAddress } = body;
 
-      subject: "Files Submission",
-      text: "Files received from partner.",
+    // Construct the email message with form data and attachments
+    const mailOptions = {
+      // from: "vendor@alsadara.com",
+      from: "Alsadara Vendor Portal <vendor@alsadara.com>",
+      // to: "supplychain@alsadaraco.com",
+      to: "daniyalrasheed343@gmail.com",
+      subject: "Vendor Form Submission",
+      text: `
+        Vendor Form Submission:
+
+        Company Name: ${companyName}
+        Address: ${address}
+        Country: ${country}
+        City: ${city}
+        Zip Code: ${zipcode}
+        Website URL: ${webAddress}
+      `,
       attachments: files.map((file) => ({
         filename: file.originalname,
         content: file.buffer,
@@ -49,6 +62,7 @@ export const config = {
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
+    // Pass both req.files and req.body to upload.array
     upload.array("attachments")(req, res, async (err) => {
       if (err) {
         console.error("Error uploading files:", err);
@@ -56,11 +70,11 @@ export default async function handler(req, res) {
       }
 
       try {
-        // Send the email with uploaded files as attachments
-        await sendEmail(req.files);
+        // Send the email with uploaded files and form data
+        await sendEmail(req.files, req.body);
         res.status(200).json({
           message:
-            "Your files have been submitted successfully  your form. We will shortly get back to you through your email.",
+            "Your Form has been submitted successfully. We will shortly get back to you through your email.",
         });
       } catch (error) {
         res
@@ -70,6 +84,6 @@ export default async function handler(req, res) {
     });
   } else {
     res.setHeader("Allow", ["POST"]);
-    res.status(405).send(`Method ${req.method} Not Allowed`);
+    res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 }

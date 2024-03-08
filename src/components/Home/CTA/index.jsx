@@ -212,7 +212,7 @@ export default function CTA({}) {
                   <div className="text-center">
                     <button
                       type="submit"
-                      className="px-8 py-2 rounded-full hover:bg-primary bg-primary-light text-white font-medium"
+                      className="px-8 py-2 w-full rounded-full hover:bg-primary bg-primary-light text-white font-medium"
                       disabled={isSubmitting}
                     >
                       {isLoading ? "Sending..." : "Send Message"}

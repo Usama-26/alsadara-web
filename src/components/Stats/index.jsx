@@ -17,12 +17,12 @@ const stats = [
     number: 230,
   },
   {
-    title: "Man Save Hours",
+    title: "Save Man Hours",
     number: 30,
   },
   {
     title: "Countries",
-    number: 6,
+    number: 5,
   },
 ];
 export default function Stats() {
@@ -49,7 +49,6 @@ function AnimatedStat({ stat, index }) {
   const rounded = useTransform(count, Math.round);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const variants = {
     visible: (i) => ({
       y: 0,
@@ -80,7 +79,11 @@ function AnimatedStat({ stat, index }) {
       className="flex items-center justify-center gap-4"
     >
       <div>
-        <motion.h1 className="font-display text-4xl">{rounded}</motion.h1>
+        <motion.h1 className="inline font-display text-4xl">
+          {rounded}
+        </motion.h1>
+        {index === 2 && <span className="font-display text-4xl">+</span>}
+        {index === 3 && <span className="font-display text-4xl">M</span>}
         <h6 className=" text-sm">{stat.title}</h6>
       </div>
     </motion.div>

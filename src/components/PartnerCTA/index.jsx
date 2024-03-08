@@ -7,11 +7,11 @@ export default function PartnerCTA({}) {
         <div className="constrained-padded">
           <div className="flex lg:flex-row flex-col gap-4 justify-between font-display py-4 px-8">
             <h1>
-              To become a partner of alsadara feel free to contact us today
+              To become a vendor with alsadara, feel free to contact us today.
             </h1>
             <div>
               <Link href="partner" className="border-b border-gray-200">
-                Become a partner
+                Become a vendor
               </Link>
             </div>
           </div>

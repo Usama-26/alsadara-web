@@ -1,8 +1,58 @@
 import { motion, AnimatePresence } from "framer-motion";
-import CTA from "@/components/Home/CTA";
+import * as Yup from "yup";
 import Footer from "@/components/Footer";
 import ContactusHero from "@/components/Hero/ContactusHero";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import MyModal from "@/components/Modal";
+import { useState } from "react";
 export default function Contactus() {
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [show, setShow] = useState(false);
+
+  const initialValues = {
+    name: "",
+    phone: "",
+    email: "",
+    subject: "select",
+    message: "",
+  };
+
+  const closeMessage = () => {
+    setShow(false);
+    setSuccess("");
+    setError("");
+  };
+
+  const handleSubmit = async (values) => {
+    setError("");
+    setSuccess("");
+    setIsLoading(true);
+    try {
+      const response = await fetch("/api/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setSuccess(
+          "You have successfully submitted your form. We will shortly get back to you through your email."
+        );
+        setShow(true);
+        setIsLoading(false);
+      } else {
+        console.error("Failed to submit form. Please Try Again Later.");
+      }
+    } catch (error) {
+      setError("Something went wrong. Please Try Again.");
+      setIsLoading(false);
+      console.error("Error:", error);
+    }
+  };
   return (
     <AnimatePresence>
       <motion.section
@@ -14,18 +64,177 @@ export default function Contactus() {
       >
         <ContactusHero />
 
-        <div className="lg:-translate-y-40 -translate-y-20">
-          <CTA />
-        </div>
-        <div className="constrained-padded my-20">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.435124142824!2d46.727148299999996!3d24.746265999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f026ae2c5f49f%3A0xd8ca7937fd8d1004!2sAl%20Sadara%2C%20King%20Abdullah%20Dt.%2C%20Riyadh%2012451%2C%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1708966668593!5m2!1sen!2s"
-            className="w-full h-96 border-0 rounded-2xl"
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        <section className="constrained-padded my-10">
+          <div className="flex lg:flex-row flex-col gap-5 ">
+            <div className="basis-1/2 p-4">
+              <h1 className="lg:text-3xl text-2xl font-display text-primary-light">
+                alsadara
+              </h1>
+              <p className="text-justify">
+                Scruboo stands out as a market benchmark, reshaping car wash
+                standards by prioritizing customer satisfaction. Our
+                professional services guarantee pristine vehicles while
+                championing equal employment opportunities, skill development,
+                and innovative cleaning solutions. We&apos;re dedicated to
+                ensuring every client receives an exceptional experience. Join
+                us in this revolution—partner with Scruboo and explore franchise
+                opportunities to redefine the business of clean.
+              </p>
+              <div className="flex flex-wrap gap-y-5 my-5">
+                <div className="basis-1/2">
+                  <h4 className="text-gray-800 font-bold">Safety & Quality</h4>
+                  <p className="">hse@alsadaraco.com</p>
+                </div>
+                <div className="basis-1/2">
+                  <h4 className="text-gray-800 font-bold">Queries</h4>
+                  <p className="">sales@alsadaraco.com</p>
+                </div>
+                <div className="basis-1/2">
+                  <h4 className="text-gray-800 font-bold">Jobs</h4>
+                  <p className="">careers@alsadaraco.com</p>
+                </div>
+              </div>
+            </div>
+            <div className="border rounded-lg basis-1/2 py-6">
+              <h1 className="lg:px-8 px-4 font-bold lg:text-3xl text-2xl text-primary-light capitalize">
+                Get in Touch
+              </h1>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={Yup.object({
+                  name: Yup.string().required("Name is required"),
+                  email: Yup.string().email().required("Email is required"),
+                  phone: Yup.string().required("Phone No. is required"),
+                  subject: Yup.string().required("Subject is required"),
+                  message: Yup.string().required("Message is required"),
+                })}
+                onSubmit={(values) => {
+                  handleSubmit(values);
+                }}
+              >
+                {({ isSubmitting }) => (
+                  <Form className="lg:px-8 px-4 my-4 space-y-4">
+                    <div>
+                      <Field
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Full Name"
+                        className="w-full rounded-full py-3 px-6 outline-primary-light  border border-gray-200 bg-white"
+                      />
+                      <ErrorMessage
+                        component={"p"}
+                        name="name"
+                        className="text-sm text-red-600"
+                      />
+                    </div>
+                    <div>
+                      <Field
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        placeholder="Phone"
+                        className="w-full rounded-full py-3 px-6 outline-primary-light  border border-gray-200 bg-white"
+                      />
+                      <ErrorMessage
+                        component={"p"}
+                        name="phone"
+                        className="text-sm text-red-600"
+                      />
+                    </div>
+                    <div>
+                      <Field
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email Address"
+                        className="w-full rounded-full py-3 px-6 outline-primary-light  border border-gray-200 bg-white"
+                      />
+                      <ErrorMessage
+                        component={"p"}
+                        name="email"
+                        className="text-sm text-red-600"
+                      />
+                    </div>
+                    <div className="rounded-full bg-white py-3 px-6 border border-gray-200">
+                      <Field
+                        as="select"
+                        name="subject"
+                        id="subject"
+                        className="w-full bg-white outline-none"
+                      >
+                        <option value="Select">Select</option>
+                        <option value="Power System">Power System</option>
+                        <option value="Electrical Installation">
+                          Electrical Installation
+                        </option>
+                        <option value="Electrical Testing">
+                          Electrical Testing & Commissioning
+                        </option>
+                        <option value="It Solutions">IT Solutions</option>
+                        <option value="Bio Medical Maintenance">
+                          Bio Medical Maintenance
+                        </option>
+                        <option value="Operation & Maintenance">
+                          Operation & Maintenance
+                        </option>
+                        <option value="MEP Solutions">MEP Solutions</option>
+                        <option value="Faculty Management">
+                          Faculty Management
+                        </option>
+                      </Field>
+                      <ErrorMessage
+                        component={"p"}
+                        name="subject"
+                        className="text-sm text-red-600"
+                      />
+                    </div>
+                    <div>
+                      <Field
+                        as="textarea"
+                        name="message"
+                        id="message"
+                        placeholder="Your Message"
+                        rows={5}
+                        className="w-full rounded-2xl px-6 py-3 outline-primary-light border border-gray-200 bg-white resize-none"
+                      />
+                      <ErrorMessage
+                        component={"p"}
+                        name="message"
+                        className="text-sm text-red-600"
+                      />
+                    </div>
+                    <div className="text-center">
+                      <button
+                        type="submit"
+                        className="px-8 py-2 w-full rounded-full hover:bg-primary bg-primary-light text-white font-medium"
+                        disabled={isSubmitting}
+                      >
+                        {isLoading ? "Sending..." : "Send Message"}
+                      </button>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+            </div>
+          </div>
+          {success && (
+            <MyModal
+              open={show}
+              setOpen={closeMessage}
+              heading={"success"}
+              message={success}
+            />
+          )}
+          {error && (
+            <MyModal
+              open={show}
+              setOpen={closeMessage}
+              heading={"error"}
+              message={error}
+            />
+          )}
+        </section>
         <Footer />
       </motion.section>
     </AnimatePresence>

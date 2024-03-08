@@ -47,7 +47,7 @@ export default function WhyChooseUs({}) {
             >
               <div className="">
                 <Image
-                  src={"/images/whychooseus/engineer.png"}
+                  src={"/images/whychooseus/img-3.png"}
                   width={450}
                   height={604}
                   alt="Why Choose Us Image"

@@ -3,14 +3,13 @@ import Image from "next/image";
 import Navbar from "../Navbar";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { AnimatePresence } from "framer-motion";
 
 const navItems = [
   { label: "Home", link: "/" },
   { label: "About Us", link: "/aboutus" },
   { label: "Services", link: "/services" },
-  { label: "Portfolio", link: "/portfolio" },
   { label: "Partners", link: "/partner" },
   { label: "Contact Us", link: "/contact" },
 ];
@@ -78,6 +77,12 @@ export default function Header({}) {
                       className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
                     >
                       <FaInstagram />
+                    </button>
+                    <button
+                      type="button"
+                      className="p-2 rounded-full border border-gray-100 text-gray-100 hover:bg-gray-100/10 transition-colors"
+                    >
+                      <FaFacebook />
                     </button>
                   </div>
                 </motion.li>

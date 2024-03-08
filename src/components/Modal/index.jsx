@@ -9,7 +9,7 @@ import { Fragment } from "react";
 export default function MyModal({ open, setOpen, heading, message }) {
   return (
     <>
-      <Transition appear show={open} as={Fragment}>
+      <Transition key={heading}  show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={setOpen}>
           <Transition.Child
             as={Fragment}

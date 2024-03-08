@@ -148,7 +148,7 @@ export default function Services({}) {
                 whileInView={"visible"}
                 variants={itemVariants}
                 // viewport={{ once: true }}
-                className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
+                className="relative group lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
                 <div className="space-y-4 relative">
@@ -191,7 +191,7 @@ export default function Services({}) {
                 whileInView={"visible"}
                 variants={itemVariants}
                 // viewport={{ once: true }}
-                className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
+                className="relative group lg:px-12 px-4 py-4 border-b lg:border-r border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
                 <div className="space-y-4 relative">
@@ -234,7 +234,7 @@ export default function Services({}) {
                 whileInView={"visible"}
                 variants={itemVariants}
                 // viewport={{ once: true }}
-                className="relative group lg:px-12 px-4 py-4 border-gray-400"
+                className="relative group lg:px-12 px-4 py-4 border-b border-gray-400"
               >
                 <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
                 <div className="space-y-4 relative">
@@ -257,6 +257,133 @@ export default function Services({}) {
                   <p className="text-gray-200 leading-relaxed">
                     Improper installation poses safety risks and reduces
                     functionality....
+                  </p>
+                  <div>
+                    <a
+                      href={"/services/service/electrical-installation"}
+                      className="group tracking-wider inline-flex gap-x-2 items-center"
+                    >
+                      <span>Learn More</span>
+                      <span className="group-hover:translate-x-2 transition-all">
+                        <FaArrowRight />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={"hidden"}
+                custom={6}
+                whileInView={"visible"}
+                variants={itemVariants}
+                // viewport={{ once: true }}
+                className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
+                  <div className="flex justify-between">
+                    <Image
+                      src={"/icons/services/electric-testing.svg"}
+                      width={100}
+                      height={100}
+                      alt="Facility 
+                        Management Logo"
+                      className="w-10 h-10"
+                    />
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      06
+                    </h1>
+                  </div>
+                  <h2 className="font-display font-bold text-lg ">
+                    Electrical Testing & Commissioning
+                  </h2>
+                  <p className="text-gray-200 leading-relaxed line-clamp-2">
+                    alsadara features a highly skilled team specializing in
+                    testing and commissioning services...
+                  </p>
+                  <div>
+                    <a
+                      href={"/services/service/electrical-installation"}
+                      className="group tracking-wider inline-flex gap-x-2 items-center"
+                    >
+                      <span>Learn More</span>
+                      <span className="group-hover:translate-x-2 transition-all">
+                        <FaArrowRight />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={"hidden"}
+                custom={7}
+                whileInView={"visible"}
+                variants={itemVariants}
+                // viewport={{ once: true }}
+                className="relative group lg:px-12 px-4 py-4 lg:border-r lg:border-b-0 border-b border-gray-400"
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
+                  <div className="flex justify-between">
+                    <Image
+                      src={"/icons/services/bio-medical.svg"}
+                      width={100}
+                      height={100}
+                      alt="Bio Medical Maintenance Logo"
+                      className="w-10 h-10"
+                    />
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      07
+                    </h1>
+                  </div>
+                  <h2 className="font-display font-bold text-lg ">
+                    Bio Medical Maintenance
+                  </h2>
+                  <p className="text-gray-200 leading-relaxed line-clamp-2">
+                    We&apos;re a leading company specializing in medical device
+                    maintenance...
+                  </p>
+                  <div>
+                    <a
+                      href={"/services/service/electrical-installation"}
+                      className="group tracking-wider inline-flex gap-x-2 items-center"
+                    >
+                      <span>Learn More</span>
+                      <span className="group-hover:translate-x-2 transition-all">
+                        <FaArrowRight />
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.div
+                initial={"hidden"}
+                custom={8}
+                whileInView={"visible"}
+                variants={itemVariants}
+                // viewport={{ once: true }}
+                className="relative group lg:px-12 px-4 py-4 "
+              >
+                <div className="group-hover:bg-[#575757] absolute w-full h-full top-0 left-0 transition-all ease-out duration-500 origin-bottom scale-y-75 group-hover:scale-100"></div>
+                <div className="space-y-4 relative">
+                  <div className="flex justify-between">
+                    <Image
+                      src={"/icons/services/it-solutions.svg"}
+                      width={100}
+                      height={100}
+                      alt="IT Solutions Logo"
+                      className="w-10 h-10"
+                    />
+                    <h1 className="text-2xl font-bold text-[#565656] group-hover:text-white">
+                      08
+                    </h1>
+                  </div>
+                  <h2 className="font-display font-bold text-lg ">
+                    IT Solutions
+                  </h2>
+                  <p className="text-gray-200 leading-relaxed line-clamp-2">
+                    alsadara, a top IT solutions provider, empowers businesses
+                    with innovative digital solutions...
                   </p>
                   <div>
                     <a

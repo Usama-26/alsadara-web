@@ -14,7 +14,7 @@ export default function FileDropzone({ files, setFiles, multiple = true }) {
       ),
     ];
     setLocalFiles(accepted);
-    setFiles((prev) => [...prev, ...accepted]);
+    setFiles([...files, ...accepted]);
   };
 
   return (
@@ -41,6 +41,7 @@ export default function FileDropzone({ files, setFiles, multiple = true }) {
               </h4>
               <p>PDF, Docs, and Xl formats</p>
               <p>Max Files : 3</p>
+              <p>Max Files Size : 10 MB</p>
               <button
                 type="button"
                 className="px-8 py-2 rounded-md font-medium border border-gray-400"

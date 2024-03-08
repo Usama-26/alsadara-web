@@ -81,7 +81,7 @@ export default function AboutUs({}) {
                 className="font-display lg:text-lg"
               >
                 Providing best industrial solution for our customers business{" "}
-                <br className="hidden lg:block" /> growing in last 11+ years.
+                <br className="hidden lg:block" /> growing in the field.
               </motion.p>
             </div>
             <div className="space-y-2 my-4 mb-6 text-sm">
@@ -102,9 +102,9 @@ export default function AboutUs({}) {
                 // viewport={{ once: true }}
                 variants={textVariants}
               >
-                The firm, established in 2013 by a team of experienced
-                engineers, originated in Egypt, offering energy solutions and
-                advisory services to hotels, resorts, and high-rises.
+                Our client-centric approach ensures that we deliver services that are in line with our clients’ strategic objectives. 
+                We view our clients as partners and work collaboratively with them to create value and drive growth. Our commitment 
+                to excellence and our unwavering focus on client satisfaction sets us apart in <br /> the industry.
               </motion.p>
               <motion.p
                 initial={"hidden"}
@@ -112,9 +112,9 @@ export default function AboutUs({}) {
                 // viewport={{ once: true }}
                 variants={textVariants}
               >
-                In 2018, we extended our services to Saudi Arabia, India
-                positioning us as a leading engineering services provider and
-                solutions creator.
+                As your partner in Energy & Facilities Management, alsadara is dedicated to fostering growth 
+                and sustainability in your operations. We are here to help you excel in your industry, 
+                ensuring your success is our success.
               </motion.p>
             </div>
             {pathname.includes("aboutus") ? null : (
@@ -128,7 +128,7 @@ export default function AboutUs({}) {
           </div>
           <div className="basis-2/5 relative">
             <Image
-              src={"/images/home/aboutus/image-3.png"}
+              src={"/images/home/aboutus/image-6.png"}
               width={1200}
               height={1119}
               alt="About us Image 1"

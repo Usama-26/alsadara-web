@@ -15,8 +15,8 @@ import BackToTop from "../BackToTop";
 const navItems = [
   { label: "Home", link: "/" },
   { label: "About Us", link: "/aboutus" },
-  { label: "Portfolio", link: "/portfolio" },
-  { label: "Become a Partners", link: "/partner" },
+  { label: "Become a Vendor", link: "/vendor" },
+  { label: "Contact us", link: "/contact" },
 ];
 
 export default function Footer({ padding }) {
@@ -74,7 +74,7 @@ export default function Footer({ padding }) {
                 </a>
               </motion.div>
               <motion.p variants={itemVariants} className="my-4">
-                Alsadara, where commitment meets excellence. Our unwavering
+                alsadara, where commitment meets excellence. Our unwavering
                 dedication and professional expertise converge to deliver
                 outstanding solutions tailored to your needs.
               </motion.p>
@@ -251,7 +251,7 @@ export default function Footer({ padding }) {
                     <span>info@alsadara.com</span>
                   </a>
                 </motion.li>
-                <motion.li variants={itemVariants}>
+                {/*  <motion.li variants={itemVariants}>
                   <a
                     href={"phone:+93456578945"}
                     className="inline-flex gap-x-2 items-center hover:underline underline-offset-2"
@@ -259,7 +259,7 @@ export default function Footer({ padding }) {
                     <FaPhone className="w-5 h-5" />
                     <span>+93456578945</span>
                   </a>
-                </motion.li>
+                    </motion.li>*/}
                 <motion.li variants={itemVariants}>
                   <a
                     href={"#"}
