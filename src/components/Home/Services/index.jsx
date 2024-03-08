@@ -40,9 +40,9 @@ export default function Services({}) {
                   </h1>
                   <span className="inline-block border-b border-t-4 border-white w-10 h-1"></span>
                   <p className="text-gray-200 leading-relaxed">
-                    Over 11 years experience & knowledge of international
-                    industrial systems, dedicated to provide the best power
-                    solutions.
+                    Over years of experience & knowledge of international
+                    industrial systems, dedicated to provide the best economical
+                    solutions which align with our clients objectives.
                   </p>
                   <div>
                     <a
