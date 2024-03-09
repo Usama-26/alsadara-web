@@ -72,14 +72,13 @@ export default function Contactus() {
               </h1>
 
               <p className="text-justify">
-                Scruboo stands out as a market benchmark, reshaping car wash
-                standards by prioritizing customer satisfaction. Our
-                professional services guarantee pristine vehicles while
-                championing equal employment opportunities, skill development,
-                and innovative cleaning solutions. We&apos;re dedicated to
-                ensuring every client receives an exceptional experience. Join
-                us in this revolution—partner with Scruboo and explore franchise
-                opportunities to redefine the business of clean.
+                At alsadara, your goals are our mission. We&apos;re here to
+                provide you with premier Energy & Facilities Management
+                solutions, tailored to your unique needs. Our team is ready and
+                eager to assist you in reaching your financial, operational, and
+                environmental objectives. Don&apos;t hesitate to reach out to
+                us. We&apos;re just a message away. Let&apos;s embark on this
+                journey towards a sustainable future together.
               </p>
               <p className="font-medium mt-4">
                 Contact us today - we’re here to assist you!
