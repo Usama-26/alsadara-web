@@ -16,7 +16,7 @@ const sendEmail = async (formData) => {
   try {
     // Construct the email message
     const mailOptions = {
-      from: "contact@alsadara.com",
+      from: "Alsadara Contact Form <contact@alsadara.com>",
       // to: "supplychain@alsadaraco.com",
       to: "m.usamaali999@gmail.com",
       subject: "Contact Form",
