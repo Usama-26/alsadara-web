@@ -17,7 +17,8 @@ const sendEmail = async (formData) => {
     // Construct the email message
     const mailOptions = {
       from: "contact@alsadara.com",
-      to: "supplychain@alsadaraco.com",
+      // to: "supplychain@alsadaraco.com",
+      to: "m.usamaali999@gmail.com",
       subject: "Contact Form",
       text: `
         Name: ${formData.name}
@@ -48,7 +49,6 @@ export default async function handler(req, res) {
           "You have successfully submitted your form. We will shortly get back to you through your email.",
       });
     } catch (error) {
-      
       res
         .status(500)
         .json({ error: "Something went wrong! Please Try Again Later." });

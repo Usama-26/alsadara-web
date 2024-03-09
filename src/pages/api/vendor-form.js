@@ -22,7 +22,8 @@ const sendEmail = async (files, body) => {
     const mailOptions = {
       // from: "vendor@alsadara.com",
       from: "Alsadara Vendor Portal <vendor@alsadara.com>",
-      to: "supplychain@alsadaraco.com",
+      to: "m.usamaali999@gmail.com",
+      // to: "supplychain@alsadaraco.com",
       subject: "Vendor Form Submission",
       text: `
         Vendor Form Submission:
